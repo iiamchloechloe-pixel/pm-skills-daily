@@ -1397,6 +1397,386 @@ const SKILLS = [{
     ],
     case: 'Grammarly 的信任设计：AI建议用绿色下划线标出→用户可以一键接受或忽略→不会强制修改→会说明建议理由（"这里被动语态可以改为主动语态"）→用户越用越信任因为建议质量稳定。关键：从不"替用户做决定"，只是"给建议"。这种谦逊的态度反而建立了深度信任。',
     resources: ['Nielsen Norman Group — AI信任设计研究','信任是AI产品最持久的护城河——比技术更难被复制','信任设计的核心原则：永远不要让用户感到"失控"']
+  },
+  // ─── 第四批扩充：传统产品技能 ──────────────────────────
+  {
+    id: 'narrative-storytelling', category: 'traditional',
+    title: '产品叙事与讲故事', en: 'Product Narrative & Storytelling',
+    desc: '产品经理最被低估的技能是"讲故事"。你的产品愿景、用户故事、商业提案本质上都是叙事。好的讲故事能力能让团队对齐方向、让管理层批准预算、让用户理解价值。数据说服理性，故事打动人心——两者缺一不可。',
+    points: [
+      '<strong>STAR 叙事法</strong>：Situation（背景）→Task（挑战）→Action（行动）→Result（结果）。适用于汇报和案例分享',
+      '<strong>用户故事板</strong>：用电影分镜的方式描绘用户的使用场景——从前→中→后，让团队"看见"用户体验',
+      '<strong>愿景叙事</strong>：不要说"我们要做XX功能"，而是说"想象一下，当用户遇到XX问题时，我们的产品让他..."',
+      '<strong>数据+故事</strong>：先用数据建立可信度（"30%的用户在这一步流失"），再用故事引发共鸣（"小王每次下单都卡在这里"）'
+    ],
+    case: 'Steve Jobs 发布 iPhone 时不是说"我们发布了一个触屏手机"，而是说"今天苹果要重新发明手机"。他先讲故事（iPod+手机+互联网通讯器三合一），再展示产品，最后公布价格。整个发布会就是一场精心编排的叙事。',
+    resources: ['《Storytelling with Data》Cole Nussbaumer — 用数据讲故事','TED Talks 演讲技巧 — 每个PM都应该学的表达能力','产品经理面试中，讲故事的能力比做功能的能力更能打动面试官']
+  },
+  {
+    id: 'accessibility-design', category: 'traditional',
+    title: '无障碍设计', en: 'Accessibility Design (a11y)',
+    desc: '无障碍设计让残障人士也能使用你的产品。全球有10亿+残障人士，而且每个人老了都会面临无障碍需求。很多国家法律要求数字产品达到WCAG标准。做好无障碍不只是道德义务，更是商业机会。',
+    points: [
+      '<strong>WCAG 标准</strong>：可感知（文字替代、字幕）、可操作（键盘导航、点击区域）、可理解（清晰语言、一致导航）、健壮（兼容辅助技术）',
+      '<strong>屏幕阅读器兼容</strong>：确保所有图片有alt文字、表单有标签、页面结构用语义化HTML',
+      '<strong>色彩对比度</strong>：文字和背景对比度至少4.5:1。不要只用颜色传达信息（色盲用户看不到）',
+      '<strong>键盘可达</strong>：所有功能都能用键盘操作。Tab键导航、Enter确认、Esc取消'
+    ],
+    case: 'Apple 的无障碍设计是行业标杆：VoiceOver（屏幕阅读器）、Switch Control（开关控制）、Live Captions（实时字幕）。这些功能服务残障用户，但也惠及所有人——开车时用Siri、嘈杂环境看字幕、单手操作手机。无障碍设计是"为少数人设计，多数人受益"。',
+    resources: ['WebAIM — 无障碍设计检测工具','Google Accessibility 指南','axe DevTools — 浏览器无障碍检测插件']
+  },
+  {
+    id: 'gamification-design', category: 'traditional',
+    title: '游戏化设计', en: 'Gamification Design',
+    desc: '游戏化不是"加个排行榜和徽章"。它是把游戏设计的核心心理学原理（目标感、成就感、社交竞争、稀缺性、即时反馈）应用到非游戏产品中，提升用户参与度和留存率。做不好游戏化会让产品变得廉价和烦人。',
+    points: [
+      '<strong>PBL 三角</strong>：Points（积分）+Badges（徽章）+Leaderboards（排行榜）。但PBL只是表面，底层是动机',
+      '<strong>内在 vs 外在动机</strong>：外在奖励（积分/优惠）会削弱内在兴趣。真正持久的游戏化是激发内在动机',
+      '<strong>进度感</strong>：进度条、等级系统、成就解锁——让用户看到自己在"变强"',
+      '<strong>社交机制</strong>：排行榜、团队挑战、分享炫耀——利用社交压力和社交认同驱动行为'
+    ],
+    case: 'Duolingo 的游戏化设计是教科书级别：连续学习天数（Streak）驱动日活→XP积分和排行榜驱动竞争→宝石奖励驱动完成课程→生命机制（答错扣心）制造紧迫感→成就徽章驱动探索。关键是每个机制都服务于"坚持学习"这个核心目标。',
+    resources: ['《Actionable Gamification》Yu-kai Chou — 八角分析法','游戏化的最大风险：过度外在奖励破坏内在动机','先想清楚你想驱动什么行为，再选择游戏化机制']
+  },
+  {
+    id: 'churn-analysis', category: 'traditional',
+    title: '用户流失分析', en: 'Churn Analysis & Prevention',
+    desc: '获取新用户的成本是留住老用户的5-7倍。流失分析不是等用户走了再发召回邮件——而是提前识别流失信号、理解流失原因、设计挽留策略。好的流失分析能把"事后补救"变成"事前预防"。',
+    points: [
+      '<strong>流失信号</strong>：登录频率下降、核心功能使用减少、客服投诉增加——这些是"沉默的流失"',
+      '<strong>流失分群</strong>：价格敏感型、体验不满型、需求变化型——不同原因不同策略',
+      '<strong>预测模型</strong>：用历史数据训练流失预测模型，提前7-14天识别高风险用户',
+      '<strong>挽留策略</strong>：优惠券（价格敏感）、专属客服（体验不满）、新功能推荐（需求变化）'
+    ],
+    case: 'Spotify 的流失预防：用户连续2周没打开App→推送个性化歌单→还没打开→推送年度回顾→还没回来→发送半价优惠。整个流程自动化，每个触点内容个性化。这套机制让Premium年流失率从8%降到5%。',
+    resources: ['Amplitude/Mixpanel — 用户行为分析工具','流失分析第一步：定义"什么算流失"——7天不活跃？30天？','挽留成本不能超过用户LTV']
+  },
+  {
+    id: 'feature-flags', category: 'traditional',
+    title: '功能开关与灰度发布', en: 'Feature Flags & Gradual Rollout',
+    desc: '功能开关让你在不发版的情况下控制功能的开关。代码可以随时合并到主干，但功能可以按需开启。灰度发布、A/B测试、紧急回滚、按用户群发布——这些都依赖功能开关。',
+    points: [
+      '<strong>发布解耦</strong>：代码合并≠功能上线。用Feature Flag控制"谁在什么时候看到什么功能"',
+      '<strong>灰度策略</strong>：内部员工→1%用户→10%→50%→全量。每一步观察指标，异常立即回滚',
+      '<strong>用户群定向</strong>：按地区、设备、会员等级定向发布。新功能先给活跃用户试',
+      '<strong>清理机制</strong>：功能全量后要清理Flag。残留Flag会增加代码复杂度'
+    ],
+    case: 'Facebook 的 Gatekeeper 系统：每个新功能都有开关→按百分比/地区/年龄灰度→出问题秒级关闭。一次Messenger更新导致崩溃→30秒内关闭→影响从100%降到5%。',
+    resources: ['LaunchDarkly/Unleash — 功能开关平台','功能开关生命周期：开发→灰度→全量→清理Flag','没有功能开关的产品就像没有刹车的车']
+  },
+  {
+    id: 'product-led-growth', category: 'traditional',
+    title: '产品驱动增长（PLG）', en: 'Product-Led Growth (PLG)',
+    desc: 'PLG是让用户通过产品本身来获客、转化和留存的增长模式。不是靠销售推、不是靠广告砸——而是产品好到用户自发传播、自己试用后自己付费。Slack、Notion、Figma、Canva都是PLG典型。',
+    points: [
+      '<strong>自助试用</strong>：用户不需要联系销售就能开始使用。免费版/试用期→体验价值→自然转化',
+      '<strong>Time to Value</strong>：从注册到感受到价值的时间越短越好。目标：5分钟内完成第一次核心操作',
+      '<strong>病毒循环</strong>：产品内置分享机制——协作邀请、分享链接、作品展示。每个用户都是获客渠道',
+      '<strong>Bottom-up 渗透</strong>：先让个人用户爱上→在团队内自发传播→推动公司采购'
+    ],
+    case: 'Figma 的PLG：设计师免费使用→分享设计文件给同事→产品经理和工程师打开查看→也开始用→团队形成共识→公司购买企业版。整个过程没有销售参与。Figma从0到1亿美元收入主要靠产品驱动。',
+    resources: ['《Product-Led Growth》Wes Bush — PLG方法论','PLG不适合所有产品——高客单价/复杂部署可能仍需销售驱动','PLG核心指标：免费→付费转化率、Time to Value、自然传播系数']
+  },
+  {
+    id: 'service-blueprint', category: 'traditional',
+    title: '服务蓝图', en: 'Service Blueprint',
+    desc: '服务蓝图比用户旅程地图更全面——它不仅描绘用户看到的前台体验，还描绘支撑体验的后台流程、支持系统和员工行为。特别适合发现"前台体验好但后台一团糟"的问题。',
+    points: [
+      '<strong>五层结构</strong>：用户行为→前台接触点→后台支持→内部协作→支撑系统',
+      '<strong>失败点</strong>：标注每个环节可能出错的地方和概率。高失败率环节是优先改进项',
+      '<strong>等待时间</strong>：标注每个环节的等待时间。用户能容忍的等待比你想象的短',
+      '<strong>跨部门对齐</strong>：服务蓝图最大价值是让产品、技术、运营、客服看到同一个全景图'
+    ],
+    case: '一个外卖平台的服务蓝图发现"商家接单"环节平均等3分钟、失败率15%→这是用户流失关键节点→解决方案：超时自动提醒+预设接单模式。这个发现靠用户旅程地图是看不到的——需要深入后台流程。',
+    resources: ['《This is Service Design Thinking》— 服务设计经典','Miro 服务蓝图模板','服务蓝图要和用户旅程地图配合——前者看全局，后者看体验']
+  },
+  {
+    id: 'design-system', category: 'traditional',
+    title: '设计系统管理', en: 'Design System Management',
+    desc: '设计系统是产品一致性和开发效率的基础设施。当产品规模扩大、团队增加，没有设计系统就会出现"同一个按钮有5种样式"的混乱。PM需要理解设计系统的价值并推动建设。',
+    points: [
+      '<strong>组件库</strong>：按钮、输入框、卡片等可复用UI组件。一次设计，处处使用',
+      '<strong>设计Token</strong>：颜色、字体、间距等基础变量。改一个Token全局生效',
+      '<strong>文档化</strong>：每个组件的使用规范、Do/Don\'t示例。没有文档的设计系统会死',
+      '<strong>版本管理</strong>：设计系统也是产品——需要版本号、变更日志、迁移指南'
+    ],
+    case: 'Ant Design 是国内最成功的设计系统：60+组件、API设计一致、文档完善、社区活跃。它让阿里内部和外部数十万开发者的效率提升数倍。成功的秘诀：不只是UI库，而是完整的设计语言和工程规范。',
+    resources: ['Ant Design / Material Design — 设计系统标杆','Figma — 设计系统管理工具','设计系统的ROI：前期投入大，但随团队扩张收益指数级增长']
+  },
+  {
+    id: 'product-discovery', category: 'traditional',
+    title: '产品发现方法', en: 'Product Discovery Methods',
+    desc: '产品发现回答"我们应该做什么"，产品交付回答"我们怎么做"。太多团队90%时间在交付，10%在发现——结果做了很多没人要的功能。好的产品发现是持续的过程。',
+    points: [
+      '<strong>双轨敏捷</strong>：Discovery Track（探索）和 Delivery Track（交付）并行',
+      '<strong>机会评估</strong>：每个机会评估"用户价值×商业价值×可行性"',
+      '<strong>快速验证</strong>：原型测试、假门测试、众筹验证——在写代码前用最低成本验证假设',
+      '<strong>持续发现</strong>：每两周做一轮用户访谈/测试，不是项目开始时做一次就完了'
+    ],
+    case: 'Teresa Torres 的Continuous Discovery：每周至少和1个用户对话→用OST连接业务目标和方案→每个方案假设驱动验证→快速淘汰不可行方案。让团队决策命中率从"靠直觉"提升到"靠证据"。',
+    resources: ['《Continuous Discovery Habits》Teresa Torres — 产品发现方法论','MVP是产品发现的工具，不是产品的第一个版本','产品发现最大的敌人是"我已经有答案了"']
+  },
+  {
+    id: 'opportunity-solution-tree', category: 'traditional',
+    title: '机会解决方案树', en: 'Opportunity Solution Tree',
+    desc: 'OST把业务目标分解为用户机会，再为每个机会探索多个解决方案，最后用实验验证。它帮助团队避免"一上来就想方案"的陷阱，而是先理解用户真正的问题。',
+    points: [
+      '<strong>树形结构</strong>：顶层=业务目标→第二层=用户机会→第三层=解决方案→底层=实验',
+      '<strong>机会发散</strong>：每个目标下找多个机会。不要只看到一个机会就开始做',
+      '<strong>方案收敛</strong>：每个机会下探索3-5个方案，用ICE评分选最优的做实验',
+      '<strong>实验驱动</strong>：每个方案都要有验证实验。通过才进入交付'
+    ],
+    case: '业务目标="提升付费转化率"→机会：不知道付费版有什么/不确定值不值/注册太复杂→针对"不确定值不值"→方案：免费试用/在线Demo/案例研究→A/B测试→免费试用转化率高40%→决定做免费试用。',
+    resources: ['《Continuous Discovery Habits》中有OST详细介绍','FigJam/MindMeister — OST绘制工具','OST不是一次性画完的——随发现深入不断更新']
+  },
+  {
+    id: 'assumption-mapping', category: 'traditional',
+    title: '假设地图', en: 'Assumption Mapping',
+    desc: '每个产品决策都基于一堆假设。假设地图让你把这些假设可视化、排序、验证。防止团队"一路狂奔做完才发现前提假设是错的"。',
+    points: [
+      '<strong>四类假设</strong>：价值（用户想要吗）、可用性（能用吗）、可行性（能做吗）、商业（能赚钱吗）',
+      '<strong>风险排序</strong>：按"影响多大"和"多不确定"两个维度排序',
+      '<strong>优先验证</strong>：先验证风险最高、最不确定的假设',
+      '<strong>验证方法</strong>：用户访谈（价值）、原型测试（可用性）、技术Spike（可行性）、定价测试（商业）'
+    ],
+    case: '一个AI写作助手的假设地图：最大风险="用户愿意让AI帮写正式文档"→Landing Page验证→转化率0.3%→发现信任障碍→调整为"AI辅助写作"→转化率3.2%。如果先做完产品再发现这个假设错误，浪费的是几个月的开发时间。',
+    resources: ['《Testing Business Ideas》David Bland — 假设验证方法论','假设地图应该在项目启动时做','最危险的假设是"用户会改变行为"——行为改变成本比想象的高10倍']
+  },
+  {
+    id: 'product-prioritization-advanced', category: 'traditional',
+    title: '高级优先级框架', en: 'Advanced Prioritization Frameworks',
+    desc: '除了RICE和Kano，还有更多高级优先级框架适用于不同场景。ICE适合增长实验，Weighted Scoring适合战略决策，Cost of Delay适合资源分配。掌握多种框架并灵活切换是成熟PM的标志。',
+    points: [
+      '<strong>ICE 评分</strong>：Impact×Confidence×Ease。适合增长实验的快速排序',
+      '<strong>Cost of Delay</strong>：每个需求延迟一周的损失。损失最大的最先做',
+      '<strong>Weighted Scoring</strong>：自定义评分维度和权重。适合战略级需求的多维度评估',
+      '<strong>Buy a Feature</strong>：给利益相关者虚拟预算"购买"功能。快速发现共识和分歧'
+    ],
+    case: '一个PM用Cost of Delay说服CEO调整优先级：功能A延迟1周损失50万、功能B延迟1周损失5万。CEO原来要求先做B（大客户要求），但看到Cost of Delay数据后同意先做A。用"每延迟一天损失多少钱"比用"优先级高"更有说服力。',
+    resources: ['《Principles of Product Development Flow》— Cost of Delay理论','ICE评分最适合早期创业公司——快速、简单、不需要太多数据','优先级框架不是数学公式——最终还是需要PM的判断力']
+  },
+  {
+    id: 'technical-product-management', category: 'traditional',
+    title: '技术产品管理', en: 'Technical Product Management',
+    desc: '技术PM专注于基础设施、平台、API等技术产品。和用户产品PM不同，技术PM的"用户"是工程师和开发者。需要更深的技术理解、更注重性能和可靠性、更长的决策周期。',
+    points: [
+      '<strong>技术债务vs新功能</strong>：技术PM最大的挑战是在稳定性和创新之间分配资源',
+      '<strong>SLA设计</strong>：定义可用性（99.9%）、延迟（P99<200ms）、吞吐量等技术指标',
+      '<strong>API设计</strong>：版本管理、向后兼容、Rate Limit、错误码规范',
+      '<strong>开发者体验</strong>：文档质量、SDK易用性、调试工具、社区支持'
+    ],
+    case: 'Stripe 的技术PM：每个API端点都有详细的文档、多语言代码示例、错误描述、Webhook调试工具。技术PM的工作不是"增加功能"而是"让集成更简单"。一个新开发者15分钟就能完成第一次收款集成——这就是优秀技术PM的成果。',
+    resources: ['《Inspired》Marty Cagan 中的技术产品章节','技术PM需要能阅读代码、理解架构、参与技术评审','技术PM的核心能力：把技术复杂度翻译成业务价值']
+  },
+  {
+    id: 'product-analytics-advanced', category: 'traditional',
+    title: '高级产品分析', en: 'Advanced Product Analytics',
+    desc: '超越基础的DAU/MAU，高级产品分析包括队列分析、留存分析、归因分析、预测分析。这些方法能帮你回答更深层的问题：哪些用户最有价值？什么行为预示着留存？增长来自哪里？',
+    points: [
+      '<strong>队列分析</strong>：按注册时间/获客渠道/用户特征分组，比较不同队列的行为差异',
+      '<strong>留存曲线</strong>：Day1/Day7/Day30留存率。曲线变平的位置=产品找到核心价值的时刻',
+      '<strong>行为序列分析</strong>：用户从A到B到C的行为路径。发现"成功用户"和"流失用户"的路径差异',
+      '<strong>预测分析</strong>：用历史数据预测未来——哪些用户会流失、哪些功能会成功、收入趋势'
+    ],
+    case: '一个SaaS产品的队列分析发现：通过内容营销获客的用户30天留存45%，通过广告获客的只有20%。但广告获客的付费转化率更高（15% vs 8%）。结论：内容营销获取的用户需要更长的培育期，但长期价值更高。这个洞察改变了获客策略的资源分配。',
+    resources: ['Amplitude/Mixpanel — 高级产品分析工具','SQL是PM的超级能力——能自己写查询做分析的PM效率高10倍','分析的目标不是"看数据"而是"做决策"——每个分析都要能回答"所以我们应该怎么做"']
+  },
+  {
+    id: 'product-ethics', category: 'traditional',
+    title: '产品伦理设计', en: 'Product Ethics Design',
+    desc: '产品伦理不是"不作恶"这么简单。暗黑模式（Dark Patterns）、上瘾机制、数据剥削、算法歧视——每一个产品决策都有伦理维度。好的产品伦理不是限制增长，而是建立长期信任。',
+    points: [
+      '<strong>暗黑模式识别</strong>：虚假紧迫感（"仅剩1件"）、隐藏费用、难以取消订阅、诱导点击',
+      '<strong>上瘾 vs 参与</strong>：参与是为用户创造价值，上瘾是利用心理弱点。界限在于"用户是否受益"',
+      '<strong>数据伦理</strong>：收集的数据是否必要？用户是否知情？是否用于用户预期之外的目的？',
+      '<strong>算法公平</strong>：推荐算法是否对所有群体公平？是否存在系统性偏见？'
+    ],
+    case: 'LinkedIn 曾被批评使用暗黑模式：注册时默认勾选"发送通讯录邀请邮件"→用户的联系人收到大量垃圾邀请→引发隐私争议。改为明确的选择加入后，注册转化率短期下降，但用户信任度和长期留存提升了。短期指标下降不一定是坏事。',
+    resources: ['《Ruined by Design》Mike Monteiro — 设计师的伦理责任','darkpatterns.org — 暗黑模式案例库','产品伦理的黄金测试：如果这个决策被媒体报道，你会感到自豪还是尴尬？']
+  },
+
+  // ─── 第四批扩充：AI 产品技能 ──────────────────────────
+  {
+    id: 'ai-customer-service', category: 'ai',
+    title: 'AI 客服产品设计', en: 'AI Customer Service Product Design',
+    desc: 'AI客服是目前商业化最成熟的AI场景。但不只是"用ChatGPT回复用户"——需要处理多轮对话、知识库管理、情绪识别、人机切换、质量监控。做好了降本50%以上，做不好让用户更愤怒。',
+    points: [
+      '<strong>意图路由</strong>：判断问题类型→FAQ直接答、业务类查知识库、投诉类转人工',
+      '<strong>知识库管理</strong>：产品文档/FAQ/历史工单→向量化→RAG检索。更新频率直接影响质量',
+      '<strong>情绪识别</strong>：检测用户情绪→愤怒用户优先转人工→焦虑用户给安抚话术',
+      '<strong>质量监控</strong>：人工抽检AI回答→满意度评分→标记低质量→持续优化'
+    ],
+    case: 'Intercom Fin AI客服：基于GPT-4→自动从帮助文档检索→回答附带来源→解决不了转人工并附带AI已尝试方案。上线后工单量下降40%，满意度从4.2升到4.5。',
+    resources: ['Intercom Fin / Zendesk AI — AI客服标杆','核心指标：解决率、满意度、首次响应时间','最大坑：用户说一大堆→AI回复"我不太理解"——比没有AI体验更差']
+  },
+  {
+    id: 'ai-analytics-product', category: 'ai',
+    title: 'AI 数据分析产品', en: 'AI Analytics Product Design',
+    desc: 'AI让数据分析从"会SQL的人专属"变成"人人都能用"。自然语言查询（NL2SQL）、自动洞察、智能报表让非技术人员也能通过对话获取数据。核心挑战：AI生成的SQL是否正确？结果是否可信？',
+    points: [
+      '<strong>NL2SQL</strong>：自然语言→SQL→查数据库→返回结果。难点在歧义消解和SQL准确性',
+      '<strong>自动洞察</strong>：AI主动发现异常和趋势——"本周转化率下降15%，主要来自新用户"',
+      '<strong>可信度设计</strong>：展示SQL让用户验证、标注数据来源、提示时效性',
+      '<strong>引导式分析</strong>：不只给答案，还引导深入——"要按地区拆分吗？""对比上周？"'
+    ],
+    case: 'ThoughtSpot：用户输入"上月各地区销售额"→AI生成SQL→返回图表→追问"华东为什么下降"→AI自动分析原因。关键：每步展示AI思考过程，用户可验证修正。',
+    resources: ['ThoughtSpot / Databricks AI SQL — AI分析产品','NL2SQL准确率70-85%——要考虑"SQL错误"的降级方案','最大风险：用户盲目信任错误查询结果做错误决策']
+  },
+  {
+    id: 'ai-content-moderation', category: 'ai',
+    title: 'AI 内容审核产品', en: 'AI Content Moderation Product Design',
+    desc: '内容审核是UGC平台命脉。人工审核成本高且伤害心理健康，AI审核是必然趋势。但AI有误判（正常内容被删）和漏判（有害内容通过），需要人机协作的审核流程。',
+    points: [
+      '<strong>多模态审核</strong>：文本（敏感词+语义）、图片（色情/暴力检测）、视频（逐帧+音频）、直播（实时）',
+      '<strong>分级策略</strong>：高置信度自动删→中置信度人工队列→低置信度放行但监控',
+      '<strong>误判处理</strong>：用户申诉→人工复核→误判case反馈模型→持续降低误判率',
+      '<strong>审核员保护</strong>：AI先过滤最恶劣内容，减少审核员接触有害内容的频率'
+    ],
+    case: 'TikTok审核体系：每天百万视频→AI初筛（99%自动处理）→可疑进人工队列→审核结果反馈模型。色情内容准确率>99%，但讽刺/幽默/文化差异内容仍很低——理解"语境"是最难的部分。',
+    resources: ['Google Perspective API — 文本毒性检测','AI审核伦理：不同文化"有害"定义不同','全球平台需要本地化审核策略']
+  },
+  {
+    id: 'ai-personalization', category: 'ai',
+    title: 'AI 个性化设计', en: 'AI Personalization Design',
+    desc: '个性化是AI最直接的产品价值。但过度个性化导致信息茧房、隐私担忧和"被监视感"。好的个性化要在"相关"和"多样"之间找平衡。',
+    points: [
+      '<strong>个性化层次</strong>：基于规则→基于行为→基于特征→实时个性化',
+      '<strong>冷启动</strong>：新用户没历史数据→注册信息+热门内容+探索式推荐快速建模',
+      '<strong>可控性</strong>：让用户管理兴趣标签、推荐偏好、隐私设置。给"重置推荐"选项',
+      '<strong>透明度</strong>：告诉用户"为什么推荐这个"——"因为你看过XX""和你相似的用户喜欢"'
+    ],
+    case: '淘宝首页信息流完全个性化→每个用户看到不同商品→"猜你喜欢"点击率是通用推荐3倍。但也加入"不感兴趣"按钮和"推荐理由"标签，给用户控制感和透明度。',
+    resources: ['个性化公式：个性化程度 = f(数据量, 用户信任, 算法质量)','过度个性化：用户说"怎么到处都是这个广告"','最佳实践：80%个性化+20%意外惊喜']
+  },
+  {
+    id: 'voice-ai-product', category: 'ai',
+    title: '语音 AI 产品设计', en: 'Voice AI Product Design',
+    desc: '语音AI和文字AI有本质区别——语音是实时的、线性的、不可回看的。用户说出去不能撤回，AI回答也不能让用户"往回翻"。需要完全不同的交互设计思路。',
+    points: [
+      '<strong>实时性</strong>：语音要求<1秒响应。文字AI能容忍3秒思考，语音超过2秒用户就重复说',
+      '<strong>打断设计</strong>：用户可能在AI回答中途打断。AI需优雅停止并处理新指令',
+      '<strong>上下文保持</strong>：语音更依赖上下文——"那个呢？""上一个"——AI需理解指代',
+      '<strong>降噪容错</strong>：语音识别有错误率。产品要能处理错别字并智能纠正'
+    ],
+    case: 'Alexa的语音设计：唤醒词唤醒→蓝光环表示在听→语音识别+语义理解→执行或回答→支持Follow-up Mode（回答后继续监听5秒，用户可追问不需再次唤醒）。',
+    resources: ['Voiceflow/Botpress — 对话式AI设计','最大挑战：用户不知道"我能说什么"——需提供引导','语音AI在车载、厨房、老人/儿童场景有独特优势']
+  },
+  {
+    id: 'ai-document-processing', category: 'ai',
+    title: 'AI 文档处理产品', en: 'AI Document Processing Product Design',
+    desc: 'AI文档处理（OCR、信息提取、文档分类、合同审查）是企业效率提升的重地。大量重复性文档处理可以被AI自动化。但文档格式多样、信息复杂，AI准确率是产品成败关键。',
+    points: [
+      '<strong>OCR+结构化</strong>：图片/PDF提取文字→识别关键字段→结构化输出',
+      '<strong>信息提取</strong>：从非结构化文档提取关键信息——合同甲乙方、金额、有效期',
+      '<strong>异常检测</strong>：AI标记异常文档——金额异常大、缺少签名、条款与标准不一致',
+      '<strong>人工审核</strong>：AI处理80%常规文档，异常转人工。修正结果回流训练'
+    ],
+    case: '法律AI文档审查：律师每天审100+合同→AI预审标记风险条款（竞业限制、赔偿责任、知识产权）→律师只关注标记点→效率提升3倍。AI不是替代律师判断，而是帮律师"快速定位需要判断的地方"。',
+    resources: ['DocAI（Google）/Textract（AWS）— 文档AI服务','标准格式准确率>95%，非标准格式可能<70%','ROI极明确——直接用节省的人力成本计算']
+  },
+  {
+    id: 'ai-product-roadmap', category: 'ai',
+    title: 'AI 产品路线图', en: 'AI Product Roadmap Planning',
+    desc: 'AI产品路线图和传统产品不同——模型能力不确定性、数据依赖、技术迭代速度。路线图要更灵活、更假设驱动。',
+    points: [
+      '<strong>假设驱动</strong>：每条路线图标核心假设——"假设准确率达90%"。不成立就调整',
+      '<strong>数据前置</strong>：很多AI功能需要先有数据才能做。路线图中安排数据收集的前置任务',
+      '<strong>模型能力边界</strong>：不承诺"AI一定能做"——标注技术风险等级',
+      '<strong>快速原型</strong>：每个AI功能先用Prompt原型验证效果，再决定是否工程化'
+    ],
+    case: '一个AI写作助手路线图：Q1="AI辅助改写"（低风险）→Q2="AI生成初稿"（中风险，需Fine-tuning）→Q3="AI理解品牌风格"（高风险，需数据）。每季度基于上季度学习调整——Q1发现用户最爱"语气调整"，Q2就调整了优先级。',
+    resources: ['AI路线图核心区别：不确定性比传统产品高得多','每个AI功能都要有Plan B','路线图要"方向确定，路径灵活"']
+  },
+  {
+    id: 'ai-feedback-loop', category: 'ai',
+    title: 'AI 产品反馈闭环', en: 'AI Product Feedback Loop',
+    desc: 'AI产品核心竞争力是"越用越好"——但不会自动发生。需要设计完整反馈闭环：用户反馈→数据收集→模型优化→体验提升→更多用户。闭环断裂的地方就是产品停滞的地方。',
+    points: [
+      '<strong>隐式反馈</strong>：用户每个行为都是反馈——点击/跳过/停留/修改/重新生成',
+      '<strong>显式反馈</strong>：👍👎按钮、评分——设计要低摩擦，一键完成',
+      '<strong>反馈→训练</strong>：建立从反馈到模型改进的管道——标注→训练→评估→上线',
+      '<strong>反馈质量</strong>：过滤噪声（误点、恶意），保留高质量信号'
+    ],
+    case: 'GitHub Copilot反馈闭环：Tab接受=正面反馈→忽略/修改=负面反馈→数据用于Fine-tune→每2-4周更新→接受率从26%升到35%。关键：不需要用户主动给反馈——接受/忽略就是最好的隐式反馈。',
+    resources: ['AI反馈闭环是数据飞轮的具体实现','反馈数据质量决定模型改进上限','最快闭环：用户修改AI输出→修改前后对比→自动标注为训练数据']
+  },
+  {
+    id: 'model-governance', category: 'ai',
+    title: '模型治理', en: 'Model Governance',
+    desc: '模型治理是管理AI模型全生命周期的制度——谁能发布、发布前需要什么评估、上线后如何监控、出问题谁负责。随着AI法规出台，从"最佳实践"变成了"合规要求"。',
+    points: [
+      '<strong>模型注册</strong>：每个上线模型（含版本）都要登记——用途、训练数据、评估结果、负责人',
+      '<strong>发布审批</strong>：上线前通过安全评估、公平性测试、业务评估。高风险需额外审批',
+      '<strong>监控告警</strong>：持续监控准确率、延迟、成本、安全事件。异常自动告警',
+      '<strong>审计追溯</strong>：保留模型决策日志——"哪个版本做的？基于什么数据？"'
+    ],
+    case: 'Google的模型治理：每个AI应用通过"AI Principles Review"→评估公平性/安全性/隐私→高风险需VP审批→持续监控→违规立即下线。这套机制让Google在AI伦理争议中保持了相对干净的记录。',
+    resources: ['EU AI Act — 全球首个AI监管法规','MLflow Model Registry / W&B — 模型治理工具','核心是"可追溯"——任何时候都能回答谁/什么时候/为什么发布了这个模型']
+  },
+  {
+    id: 'ai-competitive-moat', category: 'ai',
+    title: 'AI 产品竞争壁垒', en: 'AI Product Competitive Moat',
+    desc: 'AI产品技术壁垒正在被快速追平——开源模型越来越强，API越来越便宜。持久竞争力来自：独有数据、用户习惯、生态网络效应、品牌信任。',
+    points: [
+      '<strong>数据壁垒</strong>：独有的、持续增长的数据资产。用户行为/行业/标注数据',
+      '<strong>产品壁垒</strong>：嵌入用户工作流的深度——切换成本高',
+      '<strong>品牌壁垒</strong>：用户对AI的信任需要时间建立。"这个AI靠谱"是最难复制的',
+      '<strong>生态壁垒</strong>：API、插件、集成、开发者社区'
+    ],
+    case: 'Midjourney的壁垒：不是模型最强（DALL-E 3和SD已追平），而是社区——Discord数百万用户分享作品、交流Prompt。这种社区和用户习惯很难复制。即使竞品模型更好，用户也不愿离开。',
+    resources: ['AI壁垒分析：数据>生态>品牌>技术','技术壁垒半衰期越来越短——6个月前的领先可能已被追平','最深壁垒是"用户行为改变"——切换习惯成本极高']
+  },
+  {
+    id: 'ai-privacy-design', category: 'ai',
+    title: 'AI 产品隐私设计', en: 'AI Product Privacy Design',
+    desc: 'AI产品天然需要大量数据，这和隐私保护存在张力。PM需要在"用数据提升AI"和"保护隐私"之间找平衡。隐私设计不是上线前的合规审查，而是从需求阶段就嵌入的原则。',
+    points: [
+      '<strong>数据最小化</strong>：只收集必需数据。能用匿名就不用实名',
+      '<strong>本地优先</strong>：能端侧处理的不上云。Apple的做法——Siri尽量设备处理',
+      '<strong>差分隐私</strong>：数据加噪声，保护个体隐私同时保留群体统计特征',
+      '<strong>用户控制</strong>：查看AI用了哪些数据、删除数据、选择退出数据收集'
+    ],
+    case: 'Apple隐私设计：Siri请求不关联Apple ID→处理后删除→iOS 15后大部分请求设备处理→Private Cloud Compute加密云端处理。让Apple在隐私争议中保持"隐私卫士"形象，成为竞争壁垒。',
+    resources: ['Apple Privacy Whitepaper — AI隐私设计标杆','GDPR"被遗忘权"——用户有权删除所有个人数据','76%的用户更愿意使用注重隐私保护的产品']
+  },
+  {
+    id: 'ai-integration-strategy', category: 'ai',
+    title: 'AI 集成策略', en: 'AI Integration Strategy',
+    desc: '不是每个产品都要从零训练模型。选择：用API还是自建？用RAG还是Fine-tuning？AI功能深度嵌入还是独立模块？集成策略直接影响开发速度、成本和差异化。',
+    points: [
+      '<strong>Build vs Buy</strong>：通用能力用API，核心差异化自建',
+      '<strong>嵌入深度</strong>：浅层（AI按钮）→中层（AI建议内嵌工作流）→深度（AI驱动整个体验）',
+      '<strong>供应商策略</strong>：不绑定单一供应商。用抽象层封装，支持快速切换',
+      '<strong>渐进式集成</strong>：先API验证需求→RAG提升质量→Fine-tuning做差异化'
+    ],
+    case: 'Notion AI集成：先用OpenAI API做选中文字→AI改写（浅层）→验证需求后加入基于用户文档的RAG→未来可能自建模型。每步验证需求后再加大投入。',
+    resources: ['AI集成第一原则：先跑通再优化','供应商锁定风险：OpenAI涨价50%你产品还赚钱吗？','快速集成的代码往往质量不高，预留重构时间']
+  },
+  {
+    id: 'ai-hype-evaluation', category: 'ai',
+    title: 'AI 技术成熟度评估', en: 'AI Technology Maturity Assessment',
+    desc: 'AI领域充斥炒作。PM需要分辨哪些技术真正可用、哪些还是实验室阶段。Gartner曲线是好参考：技术触发→膨胀期→幻灭期→爬升期→高原期。',
+    points: [
+      '<strong>Gartner 曲线</strong>：大多数AI在"膨胀期"被过度宣传→"幻灭期"被过度否定→"高原期"找到真实价值',
+      '<strong>技术可用性测试</strong>：不看论文指标→用你的真实数据和场景测试→结果说话',
+      '<strong>Demo vs 产品</strong>：精心调参的Demo不等于产品化也能达到同样效果',
+      '<strong>时间维度</strong>：问"这项技术1年后会怎样"比"现在怎样"更有决策价值'
+    ],
+    case: '区块链2017-2018教训：膨胀期（"区块链改变一切"）→大量项目涌入→幻灭期（大多数失败）→爬升期（在特定场景找到价值）。PM需要区分"AI能做的"和"AI应该做的"。',
+    resources: ['Gartner Hype Cycle — 技术成熟度报告','核心问题：用户愿意为这个技术的当前能力付费吗？','最安全策略：在"爬升期"投入——技术已验证，市场已教育']
+  },
+  {
+    id: 'ai-product-team', category: 'ai',
+    title: 'AI 产品团队搭建', en: 'AI Product Team Building',
+    desc: 'AI产品团队和传统团队不同——需要数据科学家、ML工程师、Prompt工程师等新角色。PM需理解每个角色的能力边界才能有效协作。AI团队文化也有特殊性：更高实验容错、更长验证周期。',
+    points: [
+      '<strong>核心角色</strong>：AI PM+ML Engineer+Data Scientist+Prompt Engineer+AI Evaluator',
+      '<strong>协作模式</strong>：PM定义"做什么"和"成功标准"→ML团队决定"怎么做"→Prompt Engineer优化→Evaluator评估',
+      '<strong>实验文化</strong>：AI产品成功率比传统低。团队需接受"实验→失败→学习→再实验"循环',
+      '<strong>评估岗位</strong>：AI Evaluator——评估输出质量、构建评测集、分析失败case'
+    ],
+    case: 'OpenAI产品团队：每个产品独立小组→PM定义场景和指标→Research提供模型→Applied做产品化→Safety做安全评估。这种结构确保研究到产品的高效转化。',
+    resources: ['AI团队最小配置：1 PM + 1 ML Eng + 1 Prompt Eng','Prompt Engineer是AI时代最新增的角色','最大挑战：研究导向 vs 产品导向的文化冲突']
   }
 ];
 
