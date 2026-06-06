@@ -1790,6 +1790,396 @@ const SKILLS = [{
     ],
     case: '一道经典PM面试题："设计一个给老年人用的社交产品"。差的回答直接说"大字体、简单界面"。好的回答先分析：老年人社交的核心需求是什么？（和子女联系、找同龄人、打发时间）→竞品分析（微信为什么不够好？）→方案（语音优先、家庭群组、兴趣社区）→MVP范围→成功指标（日活、发消息数、视频通话时长）。',
     resources: ['《Cracking the PM Interview》— PM面试圣经','Exponent — PM面试题库和模拟面试','面试最大的加分项：结构化思维 + 有理有据的取舍判断']
+  },
+  {
+    id: 'product-analytics-tools', category: 'traditional',
+    title: '产品分析工具箱', en: 'Product Analytics Toolkit',
+    desc: '产品分析是现代PM的核心能力。Mixpanel、Amplitude、PostHog、Google Analytics等工具各有优劣，选对工具并正确埋点，才能从数据中洞察用户行为。一个好的分析体系应该覆盖：用户获取、激活、留存、转化、推荐的全链路。',
+    points: [
+      '<strong>工具选型</strong>：Mixpanel适合事件分析，Amplitude擅长行为路径，PostHog开源可自部署，Heap自动捕获所有事件无需手动埋点',
+      '<strong>指标体系</strong>：从HEART框架（Happiness/Engagement/Adoption/Retention/Task Success）出发定义北极星指标和拆解指标',
+      '<strong>埋点策略</strong>：关键漏斗全埋点+长尾探索性埋点。先定义What（分析目标）→再设计How（事件和属性）→最后埋',
+      '<strong>数据驱动决策</strong>：不是看数据做什么决策，而是用数据验证假设、发现盲点。数据告诉你what，不告诉你why'
+    ],
+    case: 'Notion用Amplitude发现：用户创建第一个页面后，7天留存率飙升3倍。于是他们将"创建第一个页面"设为激活里程碑，优化新手引导让用户更快到达这个时刻，最终整体留存率提升40%。',
+    resources: ['PostHog — 开源产品分析工具，免费且功能强大','Mixpanel产品分析最佳实践指南','《Lean Analytics》—用数据驱动产品迭代的圣经']
+  },
+  {
+    id: 'zero-to-one-methodology', category: 'traditional',
+    title: '从0到1方法论', en: 'Zero to One Methodology',
+    desc: '从0到1是产品经理最具挑战的阶段——没有用户数据、没有历史经验、没有现成答案。你需要从模糊的需求中找到清晰的方向，在有限资源下做最关键的决策。核心是"发现-验证-构建"的快速循环，而非大而全的规划。',
+    points: [
+      '<strong>问题定义</strong>：先确认你在解决"谁的什么问题"。用Jobs-to-be-Done框架理解用户"雇佣"你的产品完成什么任务',
+      '<strong>假设驱动</strong>：列出所有关键假设，按风险排序，设计最便宜的实验逐个验证。最危险的假设最先验证',
+      '<strong>MVP思维</strong>：MVP不是"最小产品"，是"最小可验证学习"。每个版本只为一个关键假设服务',
+      '<strong>寻找PMF信号</strong>：NPS>40、用户自发推荐、高留存率、"如果没有这个产品会很失望"的用户>40%'
+    ],
+    case: 'Stripe早期：创始人兄弟做了一个简单的支付API demo，让几个朋友试——"用7行代码就能收钱"。朋友的反响让他们确信PMF存在。他们没有先做完整支付平台，而是从一个API端点开始，证明核心价值后再扩展。',
+    resources: ['《Zero to One》Peter Thiel — 从0到1 vs 从1到n的底层逻辑','Y Combinator Startup School — PMF验证方法论（免费在线课程）','《The Mom Test》— 如何用对话而非"伪调研"发现真需求']
+  },
+  {
+    id: 'customer-success-system', category: 'traditional',
+    title: '客户成功体系', en: 'Customer Success System',
+    desc: '客户成功（Customer Success）不是客服，而是确保客户通过你的产品实现其预期价值。对于SaaS和B2B产品，客户成功直接决定了续费率和NPS。核心理念：你的成功来自于客户的成功。',
+    points: [
+      '<strong>健康度评分</strong>：从使用频率、深度、关键功能采纳率、支持工单量、NPS等维度给每个客户打分，红黄绿分级管理',
+      '<strong>客户旅程</strong>：Onboarding（30天)→Adoption（90天）→Value Realization→Renewal/Expansion，每个阶段有不同的干预策略',
+      '<strong>QBR机制</strong>：季度业务回顾——不是汇报你的产品做了什么，而是展示客户通过你的产品实现了什么业务价值',
+      '<strong>流失预警</strong>：当健康分下降时（如登录频率降低、关键功能不再使用、支持工单增加），主动介入而非被动等待'
+    ],
+    case: 'Slack的客户成功团队发现：一个团队如果发送了2000条消息，留存率几乎是100%。于是他们把"2000条消息"设为激活里程碑，在新手引导中引导用户尽快到达这个数字——而不是教他们所有功能。',
+    resources: ['Gainsight — 客户成功平台标杆','《The Customer Success Economy》— 为什么CS是SaaS的未来','客户的"aha moment"比所有功能都重要']
+  },
+  {
+    id: 'product-experimentation', category: 'traditional',
+    title: '产品实验文化', en: 'Product Experimentation',
+    desc: '产品实验不只是A/B测试，它是一种决策文化：在不确定时，用实验代替争论和直觉。好实验的特点：假设明确、样本量够、指标先行、准备翻车。实验失败不是人的失败，而是学到了一件"不应该怎么做"的事。',
+    points: [
+      '<strong>实验金字塔</strong>：底层：用户访谈（定性，快）→ 中层：原型测试/MVP → 顶层：A/B测试（定量，统计严谨）。越快越便宜的在底层',
+      '<strong>A/B测试要素</strong>：明确假设→样本量估算→随机分流→单一变量→统计显著性（p<0.05 or 贝叶斯）→运行够久',
+      '<strong>不要A/B测试什么</strong>：新品类探索（太早期）、品牌/战略级变更、明显好的改进（浪费资源）',
+      '<strong>实验复盘</strong>：不管结果是否显著，都要复盘。"为什么是这个结果？"比"变好了吗？"更重要'
+    ],
+    case: 'Booking.com每天运行超过1000个A/B测试。他们发现：实验不显著的比例高达75-90%——也就是说大多数"好想法"其实没效果。这种文化让团队不再依赖HiPPO（最高薪的人说了算）。',
+    resources: ['Optimizely — A/B测试工具（适合Web/App）','《Trustworthy Online Controlled Experiments》— A/B测试圣经','实验失败不是你的失败——Booking.com 75%的实验不显著']
+  },
+  {
+    id: 'community-product-design', category: 'traditional',
+    title: '社区驱动产品', en: 'Community-Driven Product',
+    desc: '社区不是产品的"附属功能"，而是产品的增长引擎和护城河。从Figma的设计社区到Notion的模板社区，强大的社区能降低获客成本、提高留存率、产生UGC内容。社区驱动的产品，用户既是消费者也是创造者。',
+    points: [
+      '<strong>社区模型</strong>：Support社区（如Apple Support）→ Practice社区（如Figma设计社区）→ Interest社区（如Reddit）。选对模型比做大更重要',
+      '<strong>冷启动策略</strong>：先做"100个真爱粉"——手动邀请、深度互动、让早期用户感到被重视。量不重要，质重要',
+      '<strong>激励机制</strong>：不要把社区当"免费劳动力"。设计成就体系（徽章/等级）、给予真实价值（曝光/资源/链接）、物质激励也要跟上',
+      '<strong>产品-社区闭环</strong>：社区反馈→产品迭代→社区分享新功能→吸引新用户→更多社区反馈'
+    ],
+    case: 'Figma社区：设计师在Community中分享模板和插件→新手看到高质量作品被吸引使用Figma→做出作品后也去分享→形成飞轮。2024年Community资源的remix次数超过1亿，成为Figma最强大的获客渠道。',
+    resources: ['Discourse — 开源社区论坛平台','Circle — 现代社区平台（适合品牌社区）','Figma Community — 社区驱动增长的最佳案例']
+  },
+  {
+    id: 'developer-experience-design', category: 'traditional',
+    title: '开发者体验设计', en: 'Developer Experience (DX)',
+    desc: '开发者体验（DX）是面向开发者的产品的核心竞争力。好的DX包括：清晰的文档、快速的"Hello World"体验、合理的默认配置、有意义的错误信息。开发者不仅是用户，还是你的产品的"再传播者"。',
+    points: [
+      '<strong>TTFH指标</strong>：Time to First Hello World——从注册到第一次成功调用API的时间。每多一秒钟，就流失一批开发者',
+      '<strong>文档为王</strong>：好的文档=快速入门（5分钟Hello World）+ 概念解释 + API参考 + 实战教程。Stripe的文档被奉为行业标准',
+      '<strong>错误信息设计</strong>：不要说"Error 500"，说"你的API key似乎没有这个端点的权限，去dashboard检查一下"',
+      '<strong>SDK策略</strong>：先做好REST API，再根据主流语言（Python/JS/Java）提供SDK。SDK不是thin wrapper，要有合理的默认值和类型安全'
+    ],
+    case: 'Stripe的产品哲学："Developers are the new kingmakers"。Stripe的API文档被评为业界最佳——每个端点都有可运行的代码示例，7行代码完成支付集成。这种DX让Stripe不需销售团队就能获得开发者自下而上的推广。',
+    resources: ['Stripe API文档 — 业界标杆（请认真看一遍他们的组织方式）','《Developer Marketing》— 如何向开发者营销','Twilio的成功秘诀：DX > 功能数量']
+  },
+  {
+    id: 'product-monetization-model', category: 'traditional',
+    title: '产品变现模型', en: 'Product Monetization',
+    desc: '变现不是"加个VIP会员"那么简单。好的变现模型要回答：谁付钱？为什么付？付多少？什么时候付？变现设计和产品体验是一体两面——如果你的变现让用户感到被"收割"，那产品体验就是失败的。',
+    points: [
+      '<strong>变现模式图谱</strong>：订阅（SaaS）→ 交易抽成（Marketplace）→ 广告（媒体/社交）→ 数据/API → 硬件+软件。选模式看用户价值获取方式',
+      '<strong>定价策略</strong>：Cost-plus（成本+利润）→ Value-based（按价值定价）→ Competitive（对标竞品）。B2B优先Value-based',
+      '<strong>Freemium设计</strong>：免费版要给足够价值让用户留下来，付费版要给"必须升级"的理由。GitHub免费私有仓库就是经典案例',
+      '<strong>变现时机</strong>：先让用户感受到价值再谈钱。过早变现吓跑用户，过晚变现现金流断裂'
+    ],
+    case: 'Notion的变现策略：先免费让个人用户深度使用→个人用户在工作中推荐→团队开始用→免费版功能不够→升级付费。"个人免费+团队付费"的模型让Notion在不需要销售团队的情况下实现了病毒式增长。',
+    resources: ['《Monetizing Innovation》— 创新产品的定价方法论','ProfitWell — SaaS定价和变现研究（免费报告）','好的变现让用户感到"这钱花得值"，不是"被收割"']
+  },
+  {
+    id: 'behavioral-economics-design', category: 'traditional',
+    title: '行为经济学设计', en: 'Behavioral Economics Design',
+    desc: '行为经济学研究人在真实世界中如何做决策——往往是非理性的。作为PM，理解这些认知偏差可以帮助设计更好的产品体验：推动用户做对他们有利的事（存钱、学习、运动），同时避免操纵用户。',
+    points: [
+      '<strong>损失厌恶</strong>：人对损失的痛苦是对等收益快乐的2倍。"不订阅会失去这些数据"比"订阅能获得这些数据"更有说服力',
+      '<strong>默认效应</strong>：大部分人不会改默认设置。好的默认值是"最有利于用户的选择"——比如自动注册401k而非让员工手动加入',
+      '<strong>社会认同</strong>："100万人已经在用"比"这个产品很好"更有说服力。评论、评分、"X也买过"都在利用社会认同',
+      '<strong>即时满足</strong>：人类更重视当下奖励。健身App用"今天完成打卡"的即时正反馈来对抗"长期健康"的延迟回报'
+    ],
+    case: 'Duolingo用行为经济学做到日活3000万+：每天打卡的连续天数（损失厌恶——中断就清零）、排行榜竞争（社会认同）、即时反馈的音效和动画奖励（即时满足）。多邻国把"痛苦的学习"变成"上瘾游戏"。',
+    resources: ['《Thinking, Fast and Slow》Daniel Kahneman—行为经济学奠基之作','《Nudge》Thaler & Sunstein — 如何用"助推"改善决策','《Hooked》Nir Eyal — 如何打造用户习惯养成产品']
+  },
+  {
+    id: 'product-writing-copy', category: 'traditional',
+    title: '产品文案写作', en: 'Product Copywriting',
+    desc: '产品文案（UX Writing）是PM最被低估的能力。一个好的按钮文案可以提升10%以上的转化率。产品文案的原则：清晰>聪明、用户视角>公司视角、动词>名词。你不是在写广告，你是在和用户对话。',
+    points: [
+      '<strong>CTA文案</strong>：不要说"提交"，说"创建我的免费账户"。告诉用户点击后会发生什么。动词+价值=好CTA',
+      '<strong>错误提示</strong>：不说"输入错误"，说"这个邮箱格式不对，试试yourname@example.com"。帮助用户解决问题而非指责',
+      '<strong>空状态</strong>：不要空荡荡的空白页——说"你还没有保存任何项目——创建第一个"，附带CTA按钮',
+      '<strong>用户语言</strong>：用用户说的词而非公司内部术语。用户说"删照片"不说"移除资产"。去读客服对话、用户访谈记录找真语言'
+    ],
+    case: 'Airbnb把"Request to Book"改成"Check Availability"后，预订转化率提升显著。原按钮暗示"你要发出请求等房东批准"（门槛感），新按钮暗示"只是看一下有没有空"（低门槛），用户进来后再被体验说服。',
+    resources: ['《Microcopy: The Complete Guide》— 产品文案实战指南','Google Material Design Writing Guidelines','一句话改变转化率：好的文案是"用户说的话"']
+  },
+  {
+    id: 'product-velocity-metrics', category: 'traditional',
+    title: '产品交付速度', en: 'Product Velocity',
+    desc: '产品交付速度不是"加班更多"，而是"做对的事、减少浪费、快速学习"。衡量速度的正确指标不是story point完成数，而是"从想法到用户获得价值的周期"。提速的关键往往不是"建得更快"，而是"减少排队和等待"。',
+    points: [
+      '<strong>核心指标</strong>：Lead Time（从需求提出到上线）→ Deployment Frequency（部署频率）→ Cycle Time（开发周期）。看趋势不看过数目',
+      '<strong>去除瓶颈</strong>：大部分延迟不是"开发慢"，而是"等PR评审、等设计稿、等测试环境"。识别并消除瓶颈',
+      '<strong>小批量交付</strong>：大功能拆成小故事，一次上线一小块。小而快的交付比大而慢的交付学习速度更快',
+      '<strong>不要为速度牺牲质量</strong>：自动测试、CI/CD、feature flag不是"额外负担"，而是"提速基础设施"'
+    ],
+    case: 'Amazon的"Two-Pizza Team"原则：如果一个团队两张披萨不够吃，就太大了。小团队决策快、沟通成本低、交付速度快。2002年Bezos通过内部API强制所有团队解耦——每个服务必须通过API通信，间接推动了AWS的诞生。',
+    resources: ['《Accelerate》— DORA研究：如何衡量和改进软件交付绩效','DORA Metrics Quick Check（Google Cloud免费工具）','小团队 > 大团队，快交付 > 完美交付']
+  },
+  {
+    id: 'retention-engagement-model', category: 'traditional',
+    title: '用户留存与激活', en: 'Retention & Engagement',
+    desc: '留存是所有增长的基础——如果留不住用户，投再多钱获客都白费。留存的核心公式：留存 = 价值感知 - 替代成本。让用户"不想走"比"走不了"更重要。激活是留存的前提：没有激活就没有留存。',
+    points: [
+      '<strong>留存曲线分析</strong>：画N日留存曲线→找到"平缓点"（留存稳定下来的天数）→提高平缓高度。好的产品会有一条"微笑曲线"',
+      '<strong>Aha Moment</strong>：定义你的产品的"顿悟时刻"——用户做了什么之后留存率飙升？Facebook是"10天内加7个好友"，Dropbox是"上传一个文件"',
+      '<strong>激活漏斗</strong>：新用户注册→Setup→Aha Moment→习惯行为。每一步的流失率都要监控和优化',
+      '<strong>召回策略</strong>：Push通知+邮件+社交召回。关键是时机（用户可能想用的时候）和内容（个性化价值而非"我们想你"）'
+    ],
+    case: 'Netflix的留存策略：不做"7天免费试用"（短期策略），而是持续推荐用户可能喜欢的内容（长期策略）。Netflix发现：如果用户订阅的前30天内看了至少15个不同的节目，留存率>90%。于是他们把新用户引导的重点放在"快速探索内容"上。',
+    resources: ['《Hooked》— 用户习惯养成模型（Trigger-Action-Reward-Investment）','Amplitude《Retention Playbook》—留存分析框架','不激活 = 不留存，Aha Moment就是你的北极星']
+  },
+  {
+    id: 'product-moat-strategy', category: 'traditional',
+    title: '产品护城河战略', en: 'Product Moat Strategy',
+    desc: '护城河（Moat）是产品长期竞争力的壁垒。在AI时代，"比竞品功能多"已经不是护城河——大模型让功能复制成本接近于零。真正的护城河包括：网络效应、品牌信任、数据飞轮、切换成本、生态系统锁定。',
+    points: [
+      '<strong>网络效应</strong>：用户越多产品越好的正循环。微信的护城河不是功能，是"你所有的朋友都在上面"',
+      '<strong>数据飞轮</strong>：更多用户产生更多数据→更好模型→更好体验→更多用户。Google搜索就是典型',
+      '<strong>切换成本</strong>：用户从现有产品迁移到竞品的真实成本——包括数据迁移、习惯改变、团队重新培训',
+      '<strong>AI时代的护城河</strong>：专有数据 > 专有模型 > UI体验。拥有独特数据资产的产品（如Bloomberg的金融数据）比依赖通用模型的产品更难替代'
+    ],
+    case: 'Waze（被Google收购）的护城河是实时交通数据网络效应：更多司机使用→更准确的实时路况→更多司机被吸引→更大的数据优势。Google Maps至今无法完全替代Waze的社区上报体验，尽管GMaps功能更多。',
+    resources: ['《Competition Demystified》— 竞争战略经典','a16z: AI时代的护城河（Marc Andreessen博文）','网络效应是你的朋友，功能不是']
+  },
+  {
+    id: 'lean-product-management', category: 'traditional',
+    title: '精益产品管理', en: 'Lean Product Management',
+    desc: '精益产品管理来自丰田的精益制造理念，核心是"消除浪费"：不做没人用的功能、不等没有必要的审批、不开没有结论的会议。Build-Measure-Learn循环是精益的核心节奏——构建的每个东西都应该有学习目标。',
+    points: [
+      '<strong>消除浪费</strong>：7种产品浪费——未完成的功能、没人要的功能、重复学习、传递等待、任务切换、缺陷、过度的流程',
+      '<strong>Build-Measure-Learn</strong>：不是"先做出来再改"，而是每次Build都有明确的Measure计划和Learn目标',
+      '<strong>最小可行流程</strong>：最快的路径不是并行更多，而是减少步骤。从5步审批砍到2步比团队加班更有效',
+      '<strong>持续发现</strong>：不是做完调研就"进入开发阶段"——产品发现是持续的，至少每周做一次用户接触'
+    ],
+    case: 'Dropbox的MVP是一段3分钟视频demo——假装产品已经做好了，展示"把文件拖到文件夹里，它就自动同步到所有设备"。视频获得了7.5万注册waitlist，证明了需求存在后才开始真正开发。零代码验证了PMF。',
+    resources: ['《The Lean Startup》Eric Ries — Build-Measure-Learn循环','《Lean Product Playbook》Dan Olsen — 实操框架','在写代码之前先验证需求——Dropbox用一个视频就做到了']
+  },
+  {
+    id: 'stakeholder-communication', category: 'traditional',
+    title: '利益相关者沟通', en: 'Stakeholder Communication',
+    desc: 'PM工作中最耗时的往往不是"做产品"，而是"对齐信息"。向上要资源、横向要配合、向下给方向——每个方向的沟通策略不同。好的利益相关者管理让团队少走弯路，差的沟通让好想法死于"没沟通好"。',
+    points: [
+      '<strong>向上管理</strong>：给老板的不是"你要做什么"，而是"这样做对业务的ROI是什么"。用数据说话，给选项而非问题',
+      '<strong>横向协作</strong>：和设计/开发/运营的沟通，关键是"我们共同的目标是什么"而非"谁对谁错"。利益对齐>对错辩论',
+      '<strong>向下赋能</strong>：给团队清晰的目标（What+Why），但给他们决定How的空间。Micro management永远是团队士气杀手',
+      '<strong>坏消息先行</strong>：项目出问题第一时间同步，不等"找到解决方案再说"。坏消息越晚说越糟糕'
+    ],
+    case: 'Amazon的"六页纸会议"：会议前30分钟所有人静默读文档→然后讨论。这个机制避免了"PowerPoint演讲者偏误"（说得好不代表想得深），同时确保所有利益相关者在同一个信息基础上讨论——不管他们的职位高低。',
+    resources: ['《Radical Candor》Kim Scott — 如何直接而坦诚地沟通','Amazon六页纸会议法 — 如何写出好的产品文档','最难的不是做出好产品，而是让所有人相信这是好产品']
+  },
+  {
+    id: 'product-vision-alignment', category: 'traditional',
+    title: '产品愿景对齐', en: 'Product Vision Alignment',
+    desc: '产品愿景不是贴在墙上的标语，而是让团队在迷茫时有方向、在争吵时有判断标准的"北极星"。一个好的愿景要回答：我们在为谁创造什么价值？五年后的世界因为我们的产品会有什么不同？',
+    points: [
+      '<strong>愿景金字塔</strong>：Vision（5-10年理想世界）→ Mission（我们如何实现）→ Strategy（3年路径）→ Roadmap（季度计划）→ Sprint Tasks',
+      '<strong>有效愿景的特征</strong>：具体的（"让每个设计师协作更高效"比"赋能创意工作者"好）、有野心的、可指导决策的',
+      '<strong>持续对齐</strong>：每季度和团队过一遍：我们在做的事和愿景对齐吗？有哪些"应该做但没做"的事？',
+      '<strong>愿景陷阱</strong>：不要把愿景写成"做到行业第一"——那不是愿景是野心。愿景要描述用户生活的改变'
+    ],
+    case: 'Airbnb的早期愿景："Belong Anywhere"（让任何人在任何地方都有归属感）。这个愿景指导了从"是叫沙发还是叫家"的产品文案，到"和房东一起做饭"的体验设计，甚至到后来的"体验"和"探险"业务的拓展方向。',
+    resources: ['《Good Strategy Bad Strategy》— 战略≠愿景，好的战略包含诊断+指导方针+连贯行动','Simon Sinek: Start With Why — 为什么伟大的团队从"为什么"开始','愿景告诉你"要不要做"，Roadmap告诉你"先做什么"']
+  },
+  {
+    id: 'mcp-protocol-design', category: 'ai',
+    title: 'MCP协议与工具生态', en: 'MCP Protocol & Tool Ecosystem',
+    desc: 'MCP（Model Context Protocol）是Anthropic推出的AI与外部工具/数据源的标准化协议。它让AI Agent能像USB接口一样"即插即用"地连接各种工具——从文件系统到数据库到API。理解MCP是2025年AI产品经理的必备知识。',
+    points: [
+      '<strong>MCP架构</strong>：Host（AI应用）→ Client（协议层）→ Server（工具提供者）。Server暴露Resources（数据）、Tools（操作）、Prompts（模板）',
+      '<strong>为什么重要</strong>：MCP让AI Agent不再"孤岛化"。不再每个Agent重新开发一套工具集成——MCP标准化了整个生态',
+      '<strong>产品设计影响</strong>：未来AI产品可能变成"MCP Server + Agent"的组合。你不需要"做一个全能App"，而是"做一个好的MCP Server"',
+      '<strong>社区生态</strong>：已有数百个开源MCP Server——从Google Drive到PostgreSQL到Slack。PM需要了解哪些Server可以"拿来用"而非"自己建"'
+    ],
+    case: 'Cursor IDE通过MCP让AI编程助手能直接连接GitHub、数据库和API文档——开发者不需要在IDE和浏览器之间切换，AI能直接理解项目上下文。这种"工具整合"模式让Cursor在2025年成为增长最快的developer tool之一。',
+    resources: ['MCP官方文档 modelcontextprotocol.io','Awesome MCP Servers — GitHub上的MCP Server汇总','MCP改变的不只是工具集成方式，而是AI产品的架构范式']
+  },
+  {
+    id: 'context-engineering', category: 'ai',
+    title: '上下文工程', en: 'Context Engineering',
+    desc: '上下文工程是比Prompt Engineering更底层的AI产品设计能力——它决定了AI"知道什么"。好AI产品不是"更好地写Prompt"，而是"给AI更好的上下文"：用户画像、历史对话、相关文档、实时数据，精准地注入到每次AI调用中。',
+    points: [
+      '<strong>信息检索（RAG精髓）</strong>：不是把所有文档塞给AI，而是只检索最相关的片段。核心挑战：如何判断"相关"？向量相似度只是起点',
+      '<strong>上下文窗口管理</strong>：大模型上下文越来越大（Gemini 2M），但"更多上下文≠更好结果"。长上下文中模型容易"分心"',
+      '<strong>上下文结构设计</strong>：System Prompt（角色指令）→ Few-shot Examples → 用户上下文 → 当前Query。每部分的权重和顺序都影响输出质量',
+      '<strong>动态上下文</strong>：根据用户当前场景（时间、位置、设备、最近行为）动态调整注入什么信息。Google Maps的"现在是堵车时段"就是动态上下文的体现'
+    ],
+    case: 'Github Copilot的上下文工程：不只是"当前打开的文件"，而是包括相邻tab文件、项目结构、最近的git diff、issue描述等。Copilot团队发现：上下文越多≠补全越好，关键是找到"最相关"的信息——他们花了大量精力优化相关性排序。',
+    resources: ['《Context Engineering for LLMs》— Anthropic 官方指南','LangChain/LlamaIndex — 上下文编排框架','AI产品的天花板不是模型能力，而是喂给模型的上下文质量']
+  },
+  {
+    id: 'prompt-caching-strategy', category: 'ai',
+    title: 'Prompt缓存策略', en: 'Prompt Caching Strategy',
+    desc: 'Prompt缓存（Prompt Caching）是2025年AI成本优化的关键技术。各大模型提供商（Anthropic、OpenAI、Google）都支持缓存——如果重复发送相同的Prompt前缀，只需支付增量Token费用。这能将大批量AI调用的成本降低50-90%。',
+    points: [
+      '<strong>缓存原理</strong>：模型提供商会缓存相同的Prompt前缀。第2次及之后的调用，cache hit的部分按低价（如Anthropic的10%）计费',
+      '<strong>适用场景</strong>：System Prompt（每次调用不变）→ Few-shot示例 → 大段固定上下文。频率越高、前缀越长，节省越多',
+      '<strong>产品设计策略</strong>：把变化最小的内容放在Prompt前面（System prompt → 固定context），变化最大的放后面（用户当前input）',
+      '<strong>跨厂商差异</strong>：Anthropic自动缓存（需>1024 tokens）、OpenAI自动缓存（需>1024 tokens）、Google的Context Caching需手动管理'
+    ],
+    case: '一个客服AI产品每次调用都带上10KB的System Prompt+知识库上下文。在启用Prompt Caching后，10KB中前8KB被缓存（cache hit），成本从每次$0.03降到$0.005，日均10万次调用每年节省超过90万美元。',
+    resources: ['Anthropic Prompt Caching 文档 — 自动缓存机制','OpenAI Prompt Caching 文档 — 支持GPT-4o/mini','缓存策略设计：固定的放前面，变化的放后面']
+  },
+  {
+    id: 'ai-agent-orchestration', category: 'ai',
+    title: 'AI Agent编排', en: 'AI Agent Orchestration',
+    desc: '2025年是AI Agent元年。单Agent能做的事有限，多Agent协作才能解决复杂问题。Agent编排（Orchestration）是定义多个Agent如何协作、谁来分配任务、如何处理冲突的艺术。',
+    points: [
+      '<strong>编排模式</strong>：Sequential（流水线：A output→B input）、Parallel（并行执行后汇总）、Router（根据query类型分发给不同Agent）、Debate（多个Agent讨论后投票）',
+      '<strong>Orchestrator角色</strong>：需要一个"主控Agent"来理解任务→拆解子任务→分发给专业Agent→汇总结果→评估质量',
+      '<strong>Agent间通信</strong>：自然语言 message passing vs. 结构化JSON。结构化更适合确定性场景，自然语言更灵活',
+      '<strong>故障处理</strong>：Agent可能返回错误、幻觉、超时。编排层需要有重试、降级、人类介入的机制'
+    ],
+    case: 'Devin（Cognition AI）的多Agent架构：Planning Agent分解任务→ Coding Agent写代码→ Testing Agent跑测试→ Review Agent检查代码质量。每个Agent各司其职，Orchestrator协调流程。这种多Agent协作让Devin能独立完成复杂PR。',
+    resources: ['LangGraph — LangChain出品的Agent编排框架','AutoGen — Microsoft的多Agent对话框架','Agent不是越多越好——关键是每个Agent有明确定义的职责边界']
+  },
+  {
+    id: 'structured-output-design', category: 'ai',
+    title: '结构化输出设计', en: 'Structured Output Design',
+    desc: '让AI返回JSON而非自然语言文本，是AI产品从"聊天玩具"到"生产工具"的关键一步。结构化输出让AI可以直连API、数据库、UI组件——不再需要正则解析或"大概对了"的容错。OpenAI Structured Outputs和JSON Mode是2025年的标配。',
+    points: [
+      '<strong>Schema设计</strong>：用JSON Schema定义输出结构。关键字段：type（string/number/boolean/array/object）、required fields、enum（限制可选值）',
+      '<strong>约束策略</strong>：对于关键字段（如状态值"approved/rejected"），用enum限制+让AI"选择"而非"生成"。减少自由度的同时提高可靠性',
+      '<strong>容错设计</strong>：即使有Structured Outputs，也要做schema验证。AI可能返回不符合schema的内容——做好fallback',
+      '<strong>嵌套权衡</strong>：深层嵌套的JSON AI更容易出错。尽量扁平化结构，父对象最多2-3层'
+    ],
+    case: 'Shopify的Sidekick（AI助手）用结构化输出将用户请求转化为参数化操作："帮我调低这周的所有服装类产品折扣"→ AI输出{action:"update", target:"discount", category:"clothing", adjustment:-10, scope:"weekly"}→后端直接执行。结构化输出让自然语言变成可编程指令。',
+    resources: ['OpenAI Structured Outputs 文档 — 强制JSON Schema输出','Zod — TypeScript Schema库，可用来生成JSON Schema','好的Schema设计：少给AI自由度，多给约束边界']
+  },
+  {
+    id: 'ai-observability-monitoring', category: 'ai',
+    title: 'AI可观测性', en: 'AI Observability',
+    desc: 'AI产品的"黑盒"属性让传统监控失效。你不仅要监控"服务是否在线"，还要监控"AI输出的质量是否在下降"、"用户是否信任AI"、"幻觉率是否上升"。AI可观测性（LLM Observability）是AI产品PM必须理解的基础设施。',
+    points: [
+      '<strong>监控维度</strong>：Latency（P50/P95延迟）→ Cost（Token消耗趋势）→ Quality（人工评估/自动评估分数）→ Safety（不安全输出率）→ User Feedback（👍👎率）',
+      '<strong>漂移检测</strong>：模型更新、Prompt变更、用户行为变化都可能导致输出质量"悄悄"下降。持续运行评估集是唯一的保障',
+      '<strong>Trace分析</strong>：记录每次AI调用的完整链路（Prompt→Model→Output→User Action）用于调试和优化',
+      '<strong>成本监控</strong>：按功能/用户/场景维度跟踪Token消耗。发现"某个功能突然Token暴增"可能是Prompt退化或bug'
+    ],
+    case: 'Notion AI在上线后建立了完整的监控体系：每次AI调用记录Prompt、Model、Token数、Latency、用户后续行为（接受/修改/放弃生成内容）。通过分析"用户放弃率最高的场景"，团队优化了对应Prompt，使用率提升30%。',
+    resources: ['LangSmith — LangChain出品的LLM可观测性平台','Helicone — LLM监控和成本追踪（开源）','AI产品上线≠工作完成——监控才是持续交付的开始']
+  },
+  {
+    id: 'function-calling-design', category: 'ai',
+    title: 'Function Calling设计', en: 'Function Calling Design',
+    desc: 'Function Calling（函数调用）是让AI能"做事"而非只是"说话"的核心机制。设计好的Function Calling决定了AI Agent的能力边界——定义哪些函数、参数怎么设计、如何让AI正确选择函数和填充参数，是AI产品PM的必修课。',
+    points: [
+      '<strong>函数粒度</strong>：不要太细（create_user + set_name + set_email = 3个call）也不要太粗（一个万能函数）。一个函数对应一个明确的用户意图',
+      '<strong>参数设计</strong>：名称用natural language而非snake_case（"search query"优于"search_query"）。Description比名称更重要——AI主要靠description理解函数',
+      '<strong>错误处理</strong>：函数执行可能失败（权限、超时、数据不存在）。返回error message时，给AI足够信息帮它"自我纠正"',
+      '<strong>函数编排</strong>：多个function call需要链式调用时，支持AI根据前一步结果动态决定下一步。Parallel call用于无依赖的独立操作'
+    ],
+    case: 'ChatGPT的Plugin/Function Calling生态："搜酒店→对比价格→预订"这三个操作是三个独立function calls，Model根据前一步的返回结果决定下一步调用哪个函数。OpenAI发现：函数描述的质量比函数数量更重要——清晰的描述让AI使用准确率从60%提升到90%+。',
+    resources: ['OpenAI Function Calling 文档 — 最佳实践和示例','Anthropic Tool Use 文档 — Claude的函数调用指南','少即是多：5个设计好的函数 > 20个模糊的函数']
+  },
+  {
+    id: 'token-optimization-strategy', category: 'ai',
+    title: 'Token优化策略', en: 'Token Optimization',
+    desc: 'Token是AI产品的"燃料成本"。优化Token不仅能降低成本，还能减少延迟、提升用户体验。核心原则：不要让AI读它不需要的信息，不要让AI写它不需要的词汇。',
+    points: [
+      '<strong>输入Token优化</strong>：压缩System Prompt（去掉无效"礼貌用语"）、用摘要代替全文、只发送最相关的文档片段',
+      '<strong>输出Token优化</strong>：设置max_tokens限制（让AI"说重点"）、用结构化输出代替自然语言、要求简洁（Be concise）',
+      '<strong>压缩技术</strong>：LLMLingua等Prompt压缩工具可以自动压缩长Prompt而不损失关键信息。RAG中的reranker也能减少无效token',
+      '<strong>Token预算</strong>：为不同场景设置不同的Token预算——高价值场景（付费用户）用更多Token，低价值场景（免费试用）紧缩预算'
+    ],
+    case: 'Perplexity AI的Token优化：对于搜索query，他们先用轻量模型做搜索结果摘要（减少输入token），再用大模型基于摘要生成答案。这种"大模型+小模型"的分层架构让Perplexity的成本比直接用大模型处理全文降低了60%。',
+    resources: ['OpenAI Tokenizer — 可视化Token计数和切分','LLMLingua — Microsoft开源的Prompt压缩工具','每节省100个Token，就是赚1分钱——日积月累就是真金白银']
+  },
+  {
+    id: 'multimodal-interaction-design', category: 'ai',
+    title: '多模态交互设计', en: 'Multimodal Interaction',
+    desc: 'AI已不再只是"文字输入→文字输出"。多模态AI能理解图片、视频、音频、代码——也能生成图片、语音、视频。设计多模态AI产品意味着重新思考"用户如何和AI交互"——不再是打字，而是看、听、说、画的结合。',
+    points: [
+      '<strong>多模态输入</strong>：图片+文字、音轨+文字、视频帧+文字。关键是让用户自然表达——"拍张照"比"描述这个场景"更简单',
+      '<strong>多模态输出</strong>：除了文字回复，AI可以返回图片、图表、代码、3D模型。输出类型应该匹配用户当前场景',
+      '<strong>模态切换</strong>：用户在开车时应该用语音、在开会时应该打字、在看图时应该传图片。场景决定模态',
+      '<strong>延迟管理</strong>：多模态（尤其是视频和3D生成）延迟远超文字。设计好的loading状态、流式返回、渐进展示'
+    ],
+    case: 'Google Gemini的多模态能力：用户拍一张数学题的图片→Gemini识别手写公式→给出解题步骤→生成知识点的教学视频推荐。从"拍照→理解→解题→学习"一气呵成，这就是多模态交互的魔力——不同模态无缝衔接。',
+    resources: ['Google Gemini Multimodal 文档 — 多模态能力详解','Apple Intelligence的设计哲学 — 多模态×隐私优先','未来AI交互不是"打字聊天"，而是"看、听、说、做"的自然融合']
+  },
+  {
+    id: 'ai-personalization-engine', category: 'ai',
+    title: 'AI个性化引擎', en: 'AI Personalization Engine',
+    desc: 'AI让个性化从"千人一面"变成"千人千面"甚至"一人千面"（同一个用户在不同时间看到不同内容）。AI个性化不只是推荐算法，还包括动态UI、自适应内容、个性化Prompt。核心：在不侵犯隐私的前提下，让每个用户觉得"这个产品就是为我做的"。',
+    points: [
+      '<strong>个性化层级</strong>：基础层（基于人口统计）→ 行为层（基于使用行为）→ 意图层（基于当前上下文和实时意图）→ 情感层（基于情绪和状态）',
+      '<strong>个性化Prompt</strong>：根据用户画像动态调整System Prompt——新手用户用更详细引导的Prompt，专家用户用简洁专业的Prompt',
+      '<strong>冷启动策略</strong>：新用户没有行为数据时怎么办？用"用户自己选的偏好"+"同类用户平均偏好"+渐进式学习',
+      '<strong>隐私边界</strong>：个性化越多=需要数据越多。要明确告诉用户"我们用了什么数据来个性化"，给用户开关'
+    ],
+    case: 'TikTok的AI个性化引擎不是"看用户喜欢什么推什么"，而是"探索用户可能喜欢但还没见过的东西"。TikTok在"已知偏好"和"探索新内容"之间有一个精妙的平衡——完全迎合已知偏好会让用户"信息茧房"，完全不迎合则用户流失。',
+    resources: ['《AI Personalization at Scale》— 大规模个性化实战','Netflix推荐系统演进 — 从协同过滤到深度学习','好的个性化：用户觉得"这推荐真懂我"。差的个性化：用户觉得"你在监视我"']
+  },
+  {
+    id: 'foundation-model-strategy', category: 'ai',
+    title: '基础模型战略', en: 'Foundation Model Strategy',
+    desc: 'AI产品PM不需要训练大模型，但必须理解"应该用哪个模型"。基础模型选择直接影响产品能力、成本和延迟。是多模型策略还是单一模型？自建还是调用API？Open Source vs. Closed Source？这些决策定义了AI产品的技术地基。',
+    points: [
+      '<strong>模型选型矩阵</strong>：按"能力/成本/延迟/隐私"四个维度评估。GPT-4o最强但最贵，Gemini Flash便宜且快，Claude 4长文本最强',
+      '<strong>多模型策略</strong>：Router模式——简单问题用小模型（便宜快），复杂问题用大模型（贵但强）。一个产品可以用3-5个模型各司其职',
+      '<strong>Open Source vs API</strong>：开源（Llama、Mistral）优势：数据不出域、可微调、无vendor lock-in。API（GPT/Claude）优势：开箱即用、持续更新、免维护',
+      '<strong>版本锁定 vs 自动升级</strong>：锁定模型版本保证输出一致性（适合生产级应用），自动升级获得最新能力（适合探索性场景）'
+    ],
+    case: 'Cursor IDE的模型策略：代码补全用快速小型模型（<500ms延迟）、代码聊天用GPT-4o/Claude 4（高质量）、长上下文分析用Claude/Gemini。不同场景用不同模型，而不是"一个模型打天下"——这是2025年AI产品的标准架构。',
+    resources: ['Artificial Analysis — 模型能力/速度/成本对比（实时更新）','OpenRouter — 多模型统一API（方便切换和对比）','好策略不是"用最强的模型"，而是"在每个场景用最合适的模型"']
+  },
+  {
+    id: 'gpu-infra-economics', category: 'ai',
+    title: 'GPU算力经济学', en: 'GPU Infrastructure Economics',
+    desc: 'GPU是AI时代的"石油"——稀缺且昂贵。理解算力成本结构能帮助PM做出更好的产品决策：什么功能必须用大模型？什么功能可以蒸馏到小模型？什么时候做"算力换体验"？什么时候做"体验换算力"？',
+    points: [
+      '<strong>成本结构</strong>：H100 GPU 约$2-3/小时（云租用）、A100约$1-2/小时。一个7B模型在H100上的推理成本约$0.0001/1K tokens',
+      '<strong>模型蒸馏</strong>：让大模型教小模型（Teacher→Student）。用GPT-4o标注数据，训练一个更小的模型来承担大部分流量——节省90%+推理成本',
+      '<strong>推理vs 训练</strong>：训练是大模型厂商的事。PM关注的是推理成本——用户每次调用的Token消耗和GPU时间',
+      '<strong>ROI分析</strong>：如果AI功能每个用户的月推理成本>$0.5，需要问：这个功能带来的留存/付费提升值不值这个成本？'
+    ],
+    case: 'Character.AI的算力优化：2024年被Google收购前，他们的日活用户量极大，推理成本是天价。团队通过量化（INT8/INT4）、批处理（Batching）、投机解码（Speculative Decoding）等技术将单次对话成本降低到最初的1/10。AI产品的盈利能力最终取决于"单位用户成本"。',
+    resources: ['SemiAnalysis — AI芯片和基础设施深度分析（行业最权威）','HuggingFace的模型推理成本估算工具','GPU不是无限的——每个AI功能都要回答"值得吗"']
+  },
+  {
+    id: 'ai-product-differentiation', category: 'ai',
+    title: 'AI产品差异化', en: 'AI Product Differentiation',
+    desc: '当所有人都能用同一个GPT-4o API时，你的AI产品凭什么不同？答案是：数据、工作流、领域专长。通用AI能力正在变成"水电煤"——差异化不在于"你接入的是哪个模型"，而在于"你如何把AI融入用户的独特场景"。',
+    points: [
+      '<strong>数据护城河</strong>：专有数据（用户数据、行业数据、内部知识）是AI产品最深的护城河。Fine-tune模型或做RAG需要的好数据无法被竞争对手轻易复制',
+      '<strong>工作流嵌入</strong>：AI不是独立的功能按钮，而是融入用户现有工作流程。Jasper营销AI表面是"文案生成"，深层是"嵌入营销团队工作流"',
+      '<strong>垂直深耕</strong>：通用AI Chatbot已经没有差异化空间了。但"专为律师设计的合同审查AI"或"专为建筑师设计的方案评审AI"仍有机会',
+      '<strong>体验壁垒</strong>：同样能力的模型，更好的UX（引导、模板、快捷操作、错误恢复）可以让用户选择你而非竞品'
+    ],
+    case: 'Harvey AI（法律AI独角兽）：用的底层模型也是GPT-4，但真正的差异化在于：①用律师事务所的专有法律数据做fine-tune和RAG ②设计了专门的法律工作流（合同审查→风险标注→条款建议）③建立了法律领域的高质量评估体系。同模型，完全不同的产品。',
+    resources: ['《AI-Native Product Design》— 如何从"AI Wrapper"进化到"AI-Native"','垂直AI > 通用AI：律师需要的是"法律AI"不是"聊天AI"','差异化质问：如果明天OpenAI做了你的功能，用户还会用你吗？']
+  },
+  {
+    id: 'ai-memory-system-design', category: 'ai',
+    title: 'AI记忆系统', en: 'AI Memory System Design',
+    desc: '人类对话有记忆——上次聊过什么、你的偏好是什么、哪些信息已经分享过。AI产品也需要记忆系统：短期记忆（当前对话）、长期记忆（跨会话持久化）、工作记忆（当前任务上下文）。设计好AI记忆，让AI从"每次重新认识你"变成"越来越懂你"。',
+    points: [
+      '<strong>记忆分层</strong>：工作记忆（当前context window）→ 短期记忆（当前session的摘要）→ 长期记忆（用户profile/history）→ 知识库（外部文档/RAG）',
+      '<strong>记忆更新策略</strong>：关键信息（用户说"我讨厌苹果"）需要持久化。临时信息（"我正在查找X"）只在session内保留',
+      '<strong>记忆压缩</strong>：长对话不能全放进context window。需要摘要压缩——保留关键决策、用户偏好、未完成任务',
+      '<strong>遗忘机制</strong>：不是所有信息都该永远记住。用户可能改变偏好、过时信息需要清理。给用户"忘记我"的控制权'
+    ],
+    case: 'ChatGPT的Memory功能：用户说"我喜欢简洁的回答，不要废话"——ChatGPT记住这个偏好并在后续对话中自动调整风格。但用户也可以随时查看和删除Memory条目。这个"用户可控的记忆"设计是AI产品信任构建的关键。',
+    resources: ['MemGPT — 让LLM管理自己的记忆（操作系统式内存管理）','OpenAI Memory 文档 — ChatGPT记忆机制详解','AI记忆系统的黄金法则：记住对的，忘记过时的，让用户掌控']
+  },
+  {
+    id: 'slop-prevention-quality', category: 'ai',
+    title: 'AI内容质量控制', en: 'AI Slop Prevention',
+    desc: 'AI Slop（AI垃圾内容）是2025年AI产品面临的最大挑战之一——低质量、重复、无价值的AI生成内容正在充斥互联网。作为AI产品PM，你需要设计机制确保AI输出的是"有用内容"而非"更多噪音"。',
+    points: [
+      '<strong>质量评估体系</strong>：不只靠"👎"计数。建立多维度评估：事实准确度、信息密度、原创性、对用户是否有行动价值',
+      '<strong>AI检测AI</strong>：用另一个模型或分类器检测AI生成的垃圾内容。但对于经过精心编辑的AI辅助内容，检测变得越来越难',
+      '<strong>human-in-the-loop</strong>：对于高风险内容（医疗建议、法律意见、新闻），必须有"人类确认"环节而非全自动发布',
+      '<strong>用户引导</strong>：教育用户如何用好AI——AI不是"一键生成答案"的魔法按钮，而是"加速思考和创作"的协作工具'
+    ],
+    case: 'Medium的AI内容治理：2024年Medium检测到大量AI生成文章涌入，他们不是一刀切禁止AI内容，而是建立了新的政策：AI辅助创作可以，但必须是"human-curated"（人工策展和编辑过的）。纯AI生成无人工编辑的内容将被降权或移除。',
+    resources: ['AI Content Detection工具对比 — Originality.ai, GPTZero, Copyleaks','Platformer — Casey Newton关于AI Slop的深度报道（必读）','AI应该帮人类创造更多"好东西"，而非更快地制造"垃圾"']
   }
 ];
 
