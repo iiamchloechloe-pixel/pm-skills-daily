@@ -2182,8 +2182,8 @@ const SKILLS = [{
     resources: ['AI Content Detection工具对比 — Originality.ai, GPTZero, Copyleaks','Platformer — Casey Newton关于AI Slop的深度报道（必读）','AI应该帮人类创造更多"好东西"，而非更快地制造"垃圾"']
   },
   {
-    id: 'ai-agent-marketplace', category: 'ai',
-    title: 'AI Agent市场与生态设计', en: 'AI Agent Marketplace & Ecosystem',
+    id: 'ai-agent-marketplace\', category: \'ai',
+    title: 'AI Agent市场与生态设计\', en: \'AI Agent Marketplace & Ecosystem',
     desc: '2025年是AI Agent爆发年。OpenAI的GPT Store、Anthropic的MCP生态、Google的Agent开发平台——各大厂商都在构建Agent市场。但Agent市场不是App Store的简单复刻：Agent之间需要协作与编排，安全审核更复杂，发现机制比开发者数量更重要。作为AI产品PM，你需要理解平台生态的设计逻辑。',
     points: [
       '<strong>平台飞轮与冷启动</strong>：越多开发者→Agent种类越丰富→越多用户→更多开发者。但冷启动是最大挑战——GPT Store上线后也经历了\"内容荒漠\"期',
@@ -2193,13 +2193,13 @@ const SKILLS = [{
       '<strong>定价与生态分成</strong>：是开发者自主定价还是平台统一定价？分成比例多少能吸引开发者又不伤害平台盈利？OpenAI的GPT Store开始探索收入分成'
     ],
     case: 'OpenAI GPT Store的起落：2024年1月上线后快速涌入大量GPTs，但\"AI女友\"和低质量内容泛滥，用户找不到真正有用的Agent。OpenAI随后加入质量评分、分类改进、推荐算法。教训：Agent市场的核心不是开发者数量，而是\"帮助用户发现有用的Agent\"——这和App Store早期的问题一模一样。2025年Anthropic走差异化路线：MCP协议建立Agent间通信标准，不是做\"Agent商店\"而是做\"Agent互联网\"。',
-    resources: ['OpenAI GPT Store 官方文档 — 平台规则、审核机制、收益分成','Anthropic MCP (Model Context Protocol) 规范 — Agent通信的标准化尝试','《Platform Revolution》— 平台生态设计的经典方法论','a16z: "The AI Agent Stack" — 2025年AI Agent生态分析']
+    resources: ['OpenAI GPT Store 官方文档 — 平台规则、审核机制、收益分成\',\'Anthropic MCP (Model Context Protocol) 规范 — Agent通信的标准化尝试\',\'《Platform Revolution》— 平台生态设计的经典方法论\',\'a16z: "The AI Agent Stack" — 2025年AI Agent生态分析']
   }
 ,
 
   {
-    id: 'ai-product-procurement', category: 'ai',
-    title: 'AI产品选型与采购决策', en: 'AI Product Procurement & Selection',
+    id: 'ai-product-procurement\', category: \'ai',
+    title: 'AI产品选型与采购决策\', en: \'AI Product Procurement & Selection',
     desc: '企业采购AI产品时面临独特挑战：模型能力快速迭代、供应商锁定风险、数据隐私合规、成本不可预测。作为PM，你需要建立AI产品选型框架，帮助组织在"自建vs购买vs开源"之间做出理性决策，而不是被销售话术和炒作裹挟。',
     points: [
       '<strong>Build vs Buy vs Open Source</strong>：自建灵活但成本高，购买快但定制难，开源透明但有维护成本。关键判断标准：是否为核心竞争力？',
@@ -2208,11 +2208,11 @@ const SKILLS = [{
       '<strong>总拥有成本（TCO）</strong>：不只是API调用费。包括：集成开发成本、Prompt工程成本、持续优化成本、用户培训成本'
     ],
     case: '某SaaS公司在2024年选型时面临选择：OpenAI API（能力强但贵且数据出境风险）vs 开源Llama自部署（便宜但需维护）。最终采用混合策略：核心对话用OpenAI，敏感数据处理用自部署Llama，非关键场景用小模型。每月成本从$5万降到$1.5万。',
-    resources: ['a16z: 'The Enterprise AI Procurement Guide' — 企业AI采购框架', 'Gartner AI Vendor Assessment — 供应商评估报告', '开源模型vs商业API的成本对比计算器']
+    resources: ['a16z: \'The Enterprise AI Procurement Guide\' — 企业AI采购框架', 'Gartner AI Vendor Assessment — 供应商评估报告', '开源模型vs商业API的成本对比计算器']
   },
   {
-    id: 'multi-agent-collaboration', category: 'ai',
-    title: '多Agent协作系统设计', en: 'Multi-Agent Collaboration Design',
+    id: 'multi-agent-collaboration\', category: \'ai',
+    title: '多Agent协作系统设计\', en: \'Multi-Agent Collaboration Design',
     desc: '单个AI Agent能做的事有限。2025年的趋势是多Agent协作——多个专业Agent分工合作完成复杂任务。类似软件开发团队有PM、工程师、设计师，AI Agent团队也需要角色分工、信息传递和冲突解决。',
     points: [
       '<strong>角色分工</strong>：Designer Agent出方案→Coder Agent写代码→Reviewer Agent检查→Tester Agent测试。每个Agent只做最擅长的事',
@@ -2224,8 +2224,8 @@ const SKILLS = [{
     resources: ['Microsoft AutoGen — 多Agent对话框架（开源）', 'LangGraph — 构建有状态的多Agent应用', 'Anthropic MCP规范 — Agent间通信标准协议']
   },
   {
-    id: 'ai-product-reliability', category: 'ai',
-    title: 'AI产品可靠性工程', en: 'AI Product Reliability Engineering',
+    id: 'ai-product-reliability\', category: \'ai',
+    title: 'AI产品可靠性工程\', en: \'AI Product Reliability Engineering',
     desc: '传统软件的可靠性有成熟的SRE实践。但AI产品的可靠性是全新挑战：模型输出不确定性、幻觉率波动、Prompt漂移、API延迟尖峰。AI产品PM需要建立AI特有的可靠性保障体系。',
     points: [
       '<strong>输出质量SLA</strong>：不能承诺"100%准确"但可以承诺"99%场景下不产生有害输出"。定义"可用"比定义"不可用"更难',
@@ -2234,11 +2234,11 @@ const SKILLS = [{
       '<strong>多模型冗余</strong>：主模型+备用模型+本地小模型的三层冗余架构，不把鸡蛋放在一个篮子里'
     ],
     case: '2024年OpenAI大宕机时，依赖单一API的产品瞬间不可用。但做了多模型冗余的产品几乎无感切换。Duolingo在宕机期间自动切换到自部署的Mistral模型，用户体验几乎没有影响。',
-    resources: ['Google SRE: 'Reliability for AI/ML Systems'', 'LiteLLM — 统一的多模型API网关（开源）', 'Prompt Regression Testing工具推荐']
+    resources: ['Google SRE: \'Reliability for AI/ML Systems', 'LiteLLM — 统一的多模型API网关（开源）', 'Prompt Regression Testing工具推荐']
   },
   {
-    id: 'vector-database-strategy', category: 'ai',
-    title: '向量数据库选型策略', en: 'Vector Database Strategy',
+    id: 'vector-database-strategy\', category: \'ai',
+    title: '向量数据库选型策略\', en: \'Vector Database Strategy',
     desc: 'RAG（检索增强生成）是2024-2025年最主流的AI产品架构，向量数据库是其核心基础设施。Pinecone、Weaviate、Milvus、Qdrant、pgvector——几十种选择。选错向量数据库可能导致查询延迟高、成本失控、扩展性瓶颈。',
     points: [
       '<strong>专用vs通用</strong>：专用向量DB（Pinecone/Milvus）性能好但贵；通用DB+向量扩展（pgvector）便宜但性能有上限',
@@ -2250,8 +2250,8 @@ const SKILLS = [{
     resources: ['Pinecone vs Weaviate vs Milvus: 2025 Benchmark对比', 'pgvector官方文档 — PostgreSQL向量扩展', '向量检索ANN算法选型指南（HNSW vs IVF vs DiskANN）']
   },
   {
-    id: 'ai-compliance-regulation', category: 'ai',
-    title: 'AI合规与监管应对', en: 'AI Compliance & Regulation Strategy',
+    id: 'ai-compliance-regulation\', category: \'ai',
+    title: 'AI合规与监管应对\', en: \'AI Compliance & Regulation Strategy',
     desc: '2024年EU AI Act正式通过，中国《生成式AI服务管理办法》已生效。AI产品不再能"先上线再补救"——合规成为产品设计的前置条件。作为AI产品PM，你需要理解全球AI监管格局，在产品架构层就考虑合规。',
     points: [
       '<strong>EU AI Act分层</strong>：禁止级（社会评分、实时生物识别）→高风险（医疗/教育/招聘）→有限风险（需告知用户）→最低风险',
@@ -2263,8 +2263,8 @@ const SKILLS = [{
     resources: ['EU AI Act 全文及分层指南（2024最终版）', '中国《生成式人工智能服务管理暂行办法》', 'IAPP AI Governance Center — AI合规专业资源']
   },
   {
-    id: 'user-onboarding-aha', category: 'traditional',
-    title: '新用户激活与Aha时刻', en: 'User Onboarding & Aha Moment Design',
+    id: 'user-onboarding-aha\', category: \'traditional',
+    title: '新用户激活与Aha时刻\', en: \'User Onboarding & Aha Moment Design',
     desc: '用户注册不等于激活。真正的激活是用户第一次体验到产品核心价值的"Aha时刻"——那一刻用户心里说"这个东西有用"。大部分产品的次日留存只有20-30%，原因就是用户从未到达Aha时刻。',
     points: [
       '<strong>Aha时刻定义</strong>：Facebook的Aha是"10天内加7个好友"，Slack是"团队发送2000条消息"。每个产品都需要找到自己的Aha时刻',
@@ -2276,8 +2276,8 @@ const SKILLS = [{
     resources: ['《Hooked》Nir Eyal — 用户习惯养成模型', 'User Onboarding调研工具：FullStory, Hotjar, UserTesting', 'Aha时刻的量化方法：找到激活用户的关联行为指标']
   },
   {
-    id: 'product-teardown', category: 'traditional',
-    title: '产品拆解方法论', en: 'Product Teardown Methodology',
+    id: 'product-teardown\', category: \'traditional',
+    title: '产品拆解方法论\', en: \'Product Teardown Methodology',
     desc: '产品拆解（Product Teardown）是顶级PM的日常训练——深度分析一个产品，理解它为什么这样设计、如何盈利。这不是浅层的"功能介绍"，而是像拆解发动机一样逐层深入。每周拆一个产品，6个月后你看产品的深度完全不同。',
     points: [
       '<strong>五层拆解法</strong>：战略层（为什么做？目标用户？）→功能层（核心功能）→交互层（怎么操作？）→数据层（收集什么？）→商业模式层（怎么赚钱？）',
@@ -2289,8 +2289,8 @@ const SKILLS = [{
     resources: ['产品拆解模板（Notion）— 标准化分析流程', '推荐拆解对象：Stripe、Figma、Linear、Notion、Canva', '拆解后必须写"可迁移的行动建议"']
   },
   {
-    id: 'competitive-intelligence-system', category: 'traditional',
-    title: '竞品情报系统化', en: 'Competitive Intelligence System',
+    id: 'competitive-intelligence-system\', category: \'traditional',
+    title: '竞品情报系统化\', en: \'Competitive Intelligence System',
     desc: '竞品分析不是一次性项目——它是持续的情报收集和分析系统。顶级公司的PM建立了实时竞品情报感知体系：当竞品更新时，你是团队里第一个知道的人。竞品情报≠抄袭情报，目的是预警和差异化。',
     points: [
       '<strong>情报来源矩阵</strong>：产品更新（App Store/Google Play版本记录）→社媒动态（Twitter/LinkedIn）→招聘信息→技术博客→用户论坛',
@@ -2302,8 +2302,8 @@ const SKILLS = [{
     resources: ['Crayon.co — 专业竞品情报工具（自动抓取竞品网站变化）', 'SimilarWeb Pro — 流量和用户行为对比', '竞品情报≠抄袭：目的是预警和差异化，不是复制']
   },
   {
-    id: 'product-internationalization', category: 'traditional',
-    title: '产品出海与国际化策略', en: 'Product Internationalization & Going Global',
+    id: 'product-internationalization\', category: \'traditional',
+    title: '产品出海与国际化策略\', en: \'Product Internationalization & Going Global',
     desc: '2025年中国产品出海进入深水区——不是翻译界面就叫国际化。真正的出海需要在产品架构层就考虑多语言、多币种、多法域、多文化。SHEIN、Temu、TikTok的成功表明：出海不是"把中国产品卖到海外"，而是"在海外做本地化产品"。',
     points: [
       '<strong>国际化（i18n）vs本地化（L10n）</strong>：i18n是技术架构——产品能支持多语言。L10n是内容和文化适配——不只是翻译文字',
@@ -2315,8 +2315,8 @@ const SKILLS = [{
     resources: ['《Going Global》— 产品出海的系统方法论', '本地化工具：Lokalise, Crowdin, Phrase', '出海合规检查清单：GDPR/CCPA/PDPA逐项对照']
   },
   {
-    id: 'developer-marketing', category: 'traditional',
-    title: '开发者关系与营销', en: 'Developer Relations & Marketing (DevRel)',
+    id: 'developer-marketing\', category: \'traditional',
+    title: '开发者关系与营销\', en: \'Developer Relations & Marketing (DevRel)',
     desc: 'API产品、开发者工具、开源项目的PM需要一套完全不同的营销能力——开发者不吃"增长黑客"那一套。信任建立在文档质量、技术社区口碑和开源透明度之上。做开发者产品的PM本身也要有技术Sense。',
     points: [
       '<strong>文档即产品</strong>：对开发者来说，API文档、SDK、Quick Start Guide就是你的"UI"。文档不好=产品不好',
@@ -2328,8 +2328,8 @@ const SKILLS = [{
     resources: ['《Developer Marketing》— SlashData出品', 'DevRel社区资源：DevRel Collective', 'API文档工具：ReadMe.io vs Mintlify vs Redocly']
   },
   {
-    id: 'traditional-product-ai-transition', category: 'ai',
-    title: '传统产品AI转型策略', en: 'Legacy Product AI Transformation',
+    id: 'traditional-product-ai-transition\', category: \'ai',
+    title: '传统产品AI转型策略\', en: \'Legacy Product AI Transformation',
     desc: '不是每个PM都在做AI原生产品——更常见的是：你有一个成熟的传统产品（CRM、ERP、办公套件），现在需要融入AI。这比从0做AI产品更难：既要保持体验稳定，又要融入AI创造新价值，还不能吓跑非技术用户。',
     points: [
       '<strong>渐进式vs颠覆式</strong>：加AI按钮（Copilot模式）vs重新设计工作流（AI-Native模式）。取决于用户接受度和业务风险',
@@ -2341,8 +2341,8 @@ const SKILLS = [{
     resources: ['Microsoft Copilot设计原则 — 大厂AI集成的参考标准', '传统产品AI化的用户调研：用户中多少人愿意/能写Prompt？', '渐进式AI转型路线图：辅助→增强→重塑三个阶段的策略']
   },
   {
-    id: 'edge-ai-product', category: 'ai',
-    title: '边缘AI产品策略', en: 'Edge AI Product Strategy',
+    id: 'edge-ai-product\', category: \'ai',
+    title: '边缘AI产品策略\', en: \'Edge AI Product Strategy',
     desc: '2025年Apple Intelligence、高通AI引擎、端侧Llama——边缘AI成为重要赛道。在设备本地运行AI有延迟低、隐私好、离线可用的优势，但受限于算力和模型大小。PM需要在"云端大模型"和"端侧小模型"之间做出产品层面的取舍。',
     points: [
       '<strong>端vs云的分工</strong>：端侧做实时/隐私敏感/高频任务（输入法预测、相机美颜）；云端做复杂/知识密集型任务（长文档分析、创意生成）',
@@ -2354,8 +2354,8 @@ const SKILLS = [{
     resources: ['Apple Intelligence 架构白皮书 — 端侧AI设计参考', 'Google MediaPipe — 端侧AI推理框架', '模型量化工具：llama.cpp, ONNX Runtime, Core ML Tools']
   },
   {
-    id: 'semantic-search-design', category: 'ai',
-    title: '语义搜索产品设计', en: 'Semantic Search Product Design',
+    id: 'semantic-search-design\', category: \'ai',
+    title: '语义搜索产品设计\', en: \'Semantic Search Product Design',
     desc: '传统关键词搜索正在被语义搜索取代。用户不需要猜"该用什么关键词"——直接用自然语言描述需求，AI理解意图并返回最相关结果。从电商、文档搜索到企业知识库，语义搜索正在重构"找到信息"的方式。',
     points: [
       '<strong>混合搜索策略</strong>：语义搜索+关键词搜索+过滤器的混合方案。纯语义可能漏掉精确匹配（如SKU编号）',
@@ -2367,8 +2367,8 @@ const SKILLS = [{
     resources: ['OpenAI Embeddings vs Cohere Embed — 模型选型对比', 'Elasticsearch + 向量搜索的混合方案架构', '搜索质量评估指标：MRR（Mean Reciprocal Rank）， NDCG']
   },
   {
-    id: 'ai-data-annotation-system', category: 'ai',
-    title: 'AI数据标注系统设计', en: 'AI Data Annotation System Design',
+    id: 'ai-data-annotation-system\', category: \'ai',
+    title: 'AI数据标注系统设计\', en: \'AI Data Annotation System Design',
     desc: 'AI产品的质量天花板很大程度上取决于标注数据质量。但标注不是"外包出去就完事"——标注系统的设计（标注规范、质控、标注员管理）直接影响模型效果。PM需要理解标注全流程，才能做出能持续改进的AI产品。',
     points: [
       '<strong>标注规范设计</strong>：标签定义必须无歧义。"这条评论是正面吗？"不够——中性算正面还是负面？讽刺呢？',
@@ -2380,8 +2380,8 @@ const SKILLS = [{
     resources: ['Label Studio — 开源数据标注平台', 'Scale AI/Databricks — 商业标注工具对比', '标注规范模板：意图分类、情感分析、实体识别的标准定义']
   },
   {
-    id: 'real-time-ai-architecture', category: 'ai',
-    title: '实时AI产品架构', en: 'Real-Time AI Product Architecture',
+    id: 'real-time-ai-architecture\', category: \'ai',
+    title: '实时AI产品架构\', en: \'Real-Time AI Product Architecture',
     desc: '不是所有AI产品都能容忍2-3秒的API延迟。语音助手、实时翻译、游戏AI——这些场景要求毫秒级响应。实时AI产品需要在模型速度、准确性和成本之间找到最优平衡点。',
     points: [
       '<strong>延迟预算</strong>：语音交互<300ms（超过感觉卡顿），实时翻译<500ms，内容生成<2s。每个场景有不同容忍度',
@@ -2393,8 +2393,8 @@ const SKILLS = [{
     resources: ['Grok-fast — 开源低延迟LLM推理方案', 'WebSocket vs SSE（Server-Sent Events）— 流式输出技术选型', '用户感知延迟：<100ms=即时，<1s=流畅，<10s=可接受']
   },
   {
-    id: 'product-iteration-cadence', category: 'traditional',
-    title: '产品迭代节奏管理', en: 'Product Iteration Cadence Management',
+    id: 'product-iteration-cadence\', category: \'traditional',
+    title: '产品迭代节奏管理\', en: \'Product Iteration Cadence Management',
     desc: '迭代太快→团队疲于奔命、质量下降。迭代太慢→错失市场窗口。找到适合团队的迭代节奏不是拍脑袋——取决于产品阶段、团队规模、市场变化速度和技术复杂度。',
     points: [
       '<strong>阶段决定节奏</strong>：0-1验证期（周迭代）→PMF冲刺期（双周）→规模增长期（月迭代）→成熟稳定期（季度）',
@@ -2406,8 +2406,8 @@ const SKILLS = [{
     resources: ['Basecamp的Shape Up方法论 — 6周迭代周期', 'Linear的Triage→Build→Ship流程', '衡量迭代效率指标：Lead Time（从需求到上线的时间）']
   },
   {
-    id: 'stakeholder-alignment', category: 'traditional',
-    title: '利益相关者对齐策略', en: 'Stakeholder Alignment Strategy',
+    id: 'stakeholder-alignment\', category: \'traditional',
+    title: '利益相关者对齐策略\', en: \'Stakeholder Alignment Strategy',
     desc: '产品经理70%的时间不是在"做产品"而是在"对齐"——让老板、销售、运营、研发对"做什么"和"为什么"达成共识。对齐失败的表现：做出来的没人用、需求反复变更、团队士气低落。',
     points: [
       '<strong>利益相关者地图</strong>：谁是决策者？谁是影响者？谁是执行者？谁是用户？每个人关心什么？',
@@ -2419,8 +2419,8 @@ const SKILLS = [{
     resources: ['《Working Backwards》— Amazon的对齐方法论', '利益相关者分析模板：Power-Interest Matrix', 'Amazon的6-Pager和沉默阅读会议模式']
   },
   {
-    id: 'remote-product-team', category: 'traditional',
-    title: '远程产品团队管理', en: 'Remote Product Team Management',
+    id: 'remote-product-team\', category: \'traditional',
+    title: '远程产品团队管理\', en: \'Remote Product Team Management',
     desc: '后疫情时代远程/混合办公已成常态。但远程产品管理面临独特挑战：异步沟通信息衰减、凝聚力下降、创意讨论质量打折。好的远程PM不是把线下流程搬到线上——需要设计全新的协作方式。',
     points: [
       '<strong>异步优先</strong>：能写文档就不开会。用Loom录演示视频代替同步Demo，用Notion代替口头传达',
@@ -2432,8 +2432,8 @@ const SKILLS = [{
     resources: ['GitLab Handbook — 全远程工作指南（公开可查）', '远程协作工具：Notion（文档）、Loom（录屏）、Miro（白板）、Slack（沟通）', '《Remote》by Basecamp — 远程工作经典方法论']
   },
   {
-    id: 'product-vision-communication', category: 'traditional',
-    title: '产品愿景传达', en: 'Product Vision Communication',
+    id: 'product-vision-communication\', category: \'traditional',
+    title: '产品愿景传达\', en: \'Product Vision Communication',
     desc: '产品愿景是PM最重要的领导力工具——它回答"我们去哪里"。但大多数愿景停留在PPT上，从未真正驱动团队决策。好的愿景是"能用的"：每天早上团队可以自检——我今天的工作是在推进愿景还是偏离愿景？',
     points: [
       '<strong>愿景公式</strong>：在[时间范围]内，让[目标用户]能够[核心价值]，不同于[现有方案]的是[差异化]',
@@ -2445,8 +2445,8 @@ const SKILLS = [{
     resources: ['《Crossing the Chasm》— 技术产品愿景构建经典', 'Amazon的PR/FAQ方法 — 用新闻稿+FAQ表达愿景', '愿景检验：6岁小孩测试——6岁小孩能理解你的愿景吗？']
   },
   {
-    id: 'product-automation-design', category: 'traditional',
-    title: '产品流程自动化设计', en: 'Product Process Automation Design',
+    id: 'product-automation-design\', category: \'traditional',
+    title: '产品流程自动化设计\', en: \'Product Process Automation Design',
     desc: 'B端产品的核心价值之一是"减少重复劳动"。2025年的自动化远超简单if-then规则——结合AI的智能自动化能处理模糊判断、异常处理和动态路径选择。PM需要设计自动化从"减少点击"到"减少思考"的升级路径。',
     points: [
       '<strong>自动化成熟度阶梯</strong>：规则化（if-then）→智能化（AI判断）→自主化（AI自动决策+执行）。不需要所有场景都最高级',
@@ -2458,8 +2458,8 @@ const SKILLS = [{
     resources: ['Zapier + Make + n8n — 自动化工具对比', 'RPA（Robotic Process Automation）vs IPA（Intelligent Process Automation）', '自动化黄金法则：能撤销、可解释、不越权']
   },
   {
-    id: 'ai-hybrid-architecture', category: 'ai',
-    title: '混合AI架构设计', en: 'Hybrid AI Architecture Design',
+    id: 'ai-hybrid-architecture\', category: \'ai',
+    title: '混合AI架构设计\', en: \'Hybrid AI Architecture Design',
     desc: '最好的AI产品不只用一个模型——而是混合多模型、多方法、云端+端侧。2025年的趋势不是"找最强模型"，而是"设计最优的模型组合策略"。小模型处理80%简单任务，大模型处理20%复杂任务，规则兜底最关键安全场景。',
     points: [
       '<strong>路由器模式</strong>：轻量Router判断请求复杂度→简单请求分给小模型→复杂请求分给大模型。整体成本降60-80%',
@@ -2471,8 +2471,8 @@ const SKILLS = [{
     resources: ['OpenRouter — 多模型路由服务（一个API调用多个模型）', 'LiteLLM — 开源统一LLM网关', 'Router模型训练：如何训练"判断该用哪个模型"的分类器']
   },
   {
-    id: 'open-source-ai-strategy', category: 'ai',
-    title: '开源AI产品策略', en: 'Open-Source AI Product Strategy',
+    id: 'open-source-ai-strategy\', category: \'ai',
+    title: '开源AI产品策略\', en: \'Open-Source AI Product Strategy',
     desc: 'Meta Llama、Mistral、Stable Diffusion——开源AI正在重塑行业格局。对AI产品PM，开源模型不只是"免费替代品"，而是战略性工具：降低边际成本、避免供应商锁定、构建开发者生态。但开源≠零成本——部署、维护、优化都需要投入。',
     points: [
       '<strong>开源vs商业选择</strong>：开源适合高调用量（边际成本低）、数据敏感（私有部署）、需定制（Fine-tune）。商业API适合快速验证、非核心功能',
@@ -2484,8 +2484,8 @@ const SKILLS = [{
     resources: ['Hugging Face Open LLM Leaderboard — 开源模型排行榜', '部署开源模型：vLLM, Ollama, llama.cpp', '开源AI商业模式：Red Hat式"开源+企业服务"']
   },
   {
-    id: 'ai-model-fine-tuning', category: 'ai',
-    title: '模型微调产品策略', en: 'AI Model Fine-Tuning Strategy',
+    id: 'ai-model-fine-tuning\', category: \'ai',
+    title: '模型微调产品策略\', en: \'AI Model Fine-Tuning Strategy',
     desc: '通用大模型缺少领域专长。Fine-tuning让模型在特定任务上表现更好——法律AI、医疗AI、金融AI都依赖它。但Fine-tune不是万能：成本高、需要高质量数据、可能导致灾难性遗忘。PM需要判断什么时候Fine-tune，什么时候用RAG就够了。',
     points: [
       '<strong>Fine-tune vs RAG决策</strong>：需要领域知识风格（法律文书语气）→Fine-tune。需要查询动态数据（今日股价）→RAG。两者常结合',
@@ -2497,8 +2497,8 @@ const SKILLS = [{
     resources: ['OpenAI Fine-Tuning API 文档', 'LoRA（Low-Rank Adaptation）— 低成本Fine-tune方法', 'Fine-tune数据准备清单：格式、质量检查、类别平衡']
   },
   {
-    id: 'ai-feedback-data-flywheel', category: 'ai',
-    title: 'AI反馈数据飞轮', en: 'AI Feedback Data Flywheel',
+    id: 'ai-feedback-data-flywheel\', category: \'ai',
+    title: 'AI反馈数据飞轮\', en: \'AI Feedback Data Flywheel',
     desc: 'AI产品最珍贵的资产不是模型，而是用户反馈数据。每一次点赞/踩、重新生成、用户修改AI输出——都是免费标注数据。设计好反馈采集机制，让产品随着使用越来越智能，这是AI产品最深的护城河。',
     points: [
       '<strong>隐式反馈>显式反馈</strong>：用户"重新生成"3次=负面信号，"复制AI输出"=正面信号。不让用户额外操作就能收集',
@@ -2510,8 +2510,8 @@ const SKILLS = [{
     resources: ['OpenAI RLHF论文 — 人类反馈强化学习基础', '开源RLHF平台：Label Studio, Argilla', '反馈系统UX设计：不打断用户流程的隐性反馈采集']
   },
   {
-    id: 'ai-product-localization', category: 'ai',
-    title: 'AI产品本地化设计', en: 'AI Product Localization Design',
+    id: 'ai-product-localization\', category: \'ai',
+    title: 'AI产品本地化设计\', en: \'AI Product Localization Design',
     desc: 'AI产品出海的双重挑战：不仅要翻译界面，还要让AI在本地语言和文化中表现好。很多AI模型英文优异，但在中文、阿拉伯语、日语上表现骤降。AI本地化不是简单"翻译Prompt"——需要从模型选择、数据准备、评估体系全面做本地化适配。',
     points: [
       '<strong>模型能力的语言差异</strong>：GPT-4中文约为英文90%，但越南语、泰语可能只有60-70%。测试模型在目标语言上的真实表现',
@@ -2523,8 +2523,8 @@ const SKILLS = [{
     resources: ['Hugging Face Multilingual Leaderboard — 多语言模型评测', '本地化A/B测试：同一功能在不同语言市场分别测试', 'AI文化适配检查清单：称呼方式、幽默感、敏感话题']
   },
   {
-    id: 'ai-experimentation-framework', category: 'ai',
-    title: 'AI产品实验框架', en: 'AI Product Experimentation Framework',
+    id: 'ai-experimentation-framework\', category: \'ai',
+    title: 'AI产品实验框架\', en: \'AI Product Experimentation Framework',
     desc: '传统A/B测试在AI产品上有很多坑：AI输出的随机性让对照组难定义、模型更新不是标准功能变更、用户体验受Prompt微调极大影响。AI产品需要重新设计实验方法——不能简单照搬传统A/B测试。',
     points: [
       '<strong>AI实验特殊挑战</strong>：输出非确定性→需要更大样本量。模型更新影响全量→无法做真正的"不更新"对照组',
@@ -2536,8 +2536,8 @@ const SKILLS = [{
     resources: ['Google Kaizen — AI产品A/B测试平台', 'Prompt评估框架：PromptBench, LangSmith', 'AI实验统计陷阱：多次比较问题、辛普森悖论在AI评估中的表现']
   },
   {
-    id: 'product-analytics-stack', category: 'traditional',
-    title: '产品分析技术栈搭建', en: 'Product Analytics Stack Design',
+    id: 'product-analytics-stack\', category: \'traditional',
+    title: '产品分析技术栈搭建\', en: \'Product Analytics Stack Design',
     desc: '数据驱动的前提是"有数据"。但很多团队的数据体系是各自为战的工具拼凑——埋点用一家、分析用另一家、A/B用第三家、画像用第四家，数据根本对不上。PM需要理解分析技术栈的架构逻辑。',
     points: [
       '<strong>数据栈五层</strong>：采集层（埋点SDK）→传输层（数据管道）→存储层（数据仓库）→建模层（指标定义）→应用层（分析/看板/实验）',
@@ -2549,8 +2549,8 @@ const SKILLS = [{
     resources: ['Amplitude vs Mixpanel vs PostHog — 2025产品分析工具对比', 'dbt（data build tool）— 数据建模和指标定义标准工具', '开源BI工具：Metabase, Apache Superset']
   },
   {
-    id: 'enterprise-product-collaboration', category: 'traditional',
-    title: '企业产品协同设计', en: 'Enterprise Product Collaborative Design',
+    id: 'enterprise-product-collaboration\', category: \'traditional',
+    title: '企业产品协同设计\', en: \'Enterprise Product Collaborative Design',
     desc: 'B端产品的核心特征是"多人使用"——不是一个用户用得好就行，而是团队/部门/公司一起用。这带来独特挑战：权限体系、协作流程、角色分工、审批机制。做单用户产品好的人，做企业协同往往翻车。',
     points: [
       '<strong>角色与权限矩阵</strong>：Admin（全局管理）、Manager（团队管理）、Member（使用功能）、Viewer（只读）、Guest（外部协作）。每种角色看到的产品完全不同',
@@ -2562,8 +2562,8 @@ const SKILLS = [{
     resources: ['IBM《Enterprise Design Thinking》— 企业产品设计方法论', '权限模型设计参考：RBAC vs ABAC', '企业SaaS的Onboarding：POC→Pilot→Rollout三阶段']
   },
   {
-    id: 'ai-security-threat-modeling', category: 'ai',
-    title: 'AI产品安全威胁建模', en: 'AI Product Threat Modeling',
+    id: 'ai-security-threat-modeling\', category: \'ai',
+    title: 'AI产品安全威胁建模\', en: \'AI Product Threat Modeling',
     desc: 'AI产品面临的攻击面与传统产品完全不同：Prompt注入、数据投毒、模型窃取、对抗样本——这些都是传统安全框架不覆盖的新型威胁。AI产品PM必须理解AI特有的安全风险，在设计阶段就建立防护机制。',
     points: [
       '<strong>Prompt注入（Top 1威胁）</strong>：用户用精心构造的Prompt让AI绕过限制。防御：输入过滤+输出审查+角色权限隔离',
