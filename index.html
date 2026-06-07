@@ -2180,6 +2180,20 @@ const SKILLS = [{
     ],
     case: 'Medium的AI内容治理：2024年Medium检测到大量AI生成文章涌入，他们不是一刀切禁止AI内容，而是建立了新的政策：AI辅助创作可以，但必须是"human-curated"（人工策展和编辑过的）。纯AI生成无人工编辑的内容将被降权或移除。',
     resources: ['AI Content Detection工具对比 — Originality.ai, GPTZero, Copyleaks','Platformer — Casey Newton关于AI Slop的深度报道（必读）','AI应该帮人类创造更多"好东西"，而非更快地制造"垃圾"']
+  },
+  {
+    id: 'ai-agent-marketplace', category: 'ai',
+    title: 'AI Agent市场与生态设计', en: 'AI Agent Marketplace & Ecosystem',
+    desc: '2025年是AI Agent爆发年。OpenAI的GPT Store、Anthropic的MCP生态、Google的Agent开发平台——各大厂商都在构建Agent市场。但Agent市场不是App Store的简单复刻：Agent之间需要协作与编排，安全审核更复杂，发现机制比开发者数量更重要。作为AI产品PM，你需要理解平台生态的设计逻辑。',
+    points: [
+      '<strong>平台飞轮与冷启动</strong>：越多开发者→Agent种类越丰富→越多用户→更多开发者。但冷启动是最大挑战——GPT Store上线后也经历了\"内容荒漠\"期',
+      '<strong>Agent编排与组合</strong>：单个Agent能做的有限，真正的价值在协作。类似Zapier但更智能：旅行Agent调航班Agent+酒店Agent+天气Agent协同工作',
+      '<strong>发现与匹配</strong>：Agent市场核心不是\"数量\"而是\"发现效率\"。用户如何快速找到能解决问题的Agent？分类、搜索、个性化推荐是核心竞争力',
+      '<strong>安全与质量审核</strong>：Agent行为不可完全预测——能调用API、操作文件、代表用户行动。传统App审核完全不够用，需要沙箱测试+行为监控+分级权限',
+      '<strong>定价与生态分成</strong>：是开发者自主定价还是平台统一定价？分成比例多少能吸引开发者又不伤害平台盈利？OpenAI的GPT Store开始探索收入分成'
+    ],
+    case: 'OpenAI GPT Store的起落：2024年1月上线后快速涌入大量GPTs，但\"AI女友\"和低质量内容泛滥，用户找不到真正有用的Agent。OpenAI随后加入质量评分、分类改进、推荐算法。教训：Agent市场的核心不是开发者数量，而是\"帮助用户发现有用的Agent\"——这和App Store早期的问题一模一样。2025年Anthropic走差异化路线：MCP协议建立Agent间通信标准，不是做\"Agent商店\"而是做\"Agent互联网\"。',
+    resources: ['OpenAI GPT Store 官方文档 — 平台规则、审核机制、收益分成','Anthropic MCP (Model Context Protocol) 规范 — Agent通信的标准化尝试','《Platform Revolution》— 平台生态设计的经典方法论','a16z: "The AI Agent Stack" — 2025年AI Agent生态分析']
   }
 ];
 
