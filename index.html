@@ -3804,6 +3804,7 @@ function App() {
       behavior: 'smooth'
     });
   }, []);
+  const progressPct = state.learned.length / SKILLS.length * 100;
   return /*#__PURE__*/React.createElement("div", {
     className: "app"
   }, /*#__PURE__*/React.createElement("header", {
