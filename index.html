@@ -3344,7 +3344,20 @@ const SKILLS = [{
     ],
     case: 'Portkey（2025年领先的AI Gateway产品）：核心功能是智能模型路由。用户设置路由规则如\"所有编程相关问题路由到Claude 4，简单客服问答路由到GPT-4o-mini，中文内容优先使用DeepSeek\"。Portkey自动追踪每个模型的成本/延迟/质量（基于用户评分），并动态调整路由策略。一家电商客户使用后，API成本降低了60%，而用户满意度分数反而提高了5%。',
     resources: ['Portkey AI Gateway产品分析 — 智能模型路由设计', 'AI模型路由策略设计：基于成本/速度/质量的动态路由', '模型路由产品化：从API Gateway到AI Infrastructure']
-  }
+  },
+  {
+    id: 'ai-product-pricing', category: 'ai',
+    title: 'AI产品定价策略', en: 'AI Product Pricing Strategy',
+    desc: 'AI产品的定价与传统SaaS完全不同。传统SaaS按席位/功能定价，边际成本趋近于零；AI产品每次调用都有真实的算力成本（Token消耗），边际成本不可忽略。2025-2026年，AI产品的定价模式正在快速演变：从简单的订阅制到Token计量制、从免费增值到分层模型路由、从按功能收费到按价值收费。PM需要理解AI成本结构、用户付费意愿、以及如何设计让用户体验好且商业可持续的定价方案。',
+    points: [
+      '<strong>AI产品的成本结构</strong>：每次API调用都有Token成本（输入+输出），不同模型成本差异巨大（GPT-4o-mini是GPT-4o的1/30）。PM需要理解：推理成本≈可变成本、训练成本≈固定成本、存储/检索成本≈基础设施成本。定价必须覆盖边际成本',
+      '<strong>五种主流定价模型</strong>：①订阅制（ChatGPT Plus $20/月，含固定额度）②Token计量制（按API调用量收费）③混合制（基础订阅+超额按量）④价值定价（按AI产出的价值收费，如AI帮你写的代码值多少钱）⑤Freemium（免费用小模型，付费解锁大模型）',
+      '<strong>免费增值的AI策略</strong>：免费层用低成本模型（GPT-4o-mini）→体验足够好让用户形成习惯→付费解锁更强模型/更多额度/高级功能。关键平衡：免费层太好→没人付费；太差→用户流失。通常免费层设为能体验到Aha时刻但有明显限制',
+      '<strong>企业级AI定价</strong>：企业客户关注的是ROI而非单价。定价策略：按座位数×AI功能模块（如Salesforce的Einstein GPT $50/用户/月）、按处理量（文档数/对话数/分析报告数）、或按节省的人力成本比例收费'
+    ],
+    case: 'OpenAI的定价策略演变（2023-2025）是AI定价的教科书：①初期按Token收费（开发者直接付费）→②推出ChatGPT Plus订阅制（$20/月，面向终端用户）→③推出Team/Enterprise版（按座位+用量混合）→④2025年推出Pro版（$200/月，无限制使用最强模型）。关键数据：ChatGPT Plus有超过1000万付费用户，但OpenAI发现订阅制在重度用户上亏钱（一个$20用户可能消耗$50的算力），因此2025年开始在Plus中引入每周使用上限。',
+    resources: ['OpenAI定价策略分析 — 从Token到订阅的演变', 'a16z AI产品定价指南 — SaaS到AI-native的定价转型', 'AI产品定价的经济学：边际成本、价格弹性和用户分层']
+  },
 ];
 
 // ─── HELPERS ────────────────────────────────────────────────
@@ -3791,9 +3804,6 @@ function App() {
       behavior: 'smooth'
     });
   }, []);
-  const currentSkill = SKILLS[viewIndex];
-  const progressPct = Math.round(state.learned.length / SKILLS.length * 100);
-  return /*#__PURE__*/React.createElement("div", {
     className: "app"
   }, /*#__PURE__*/React.createElement("header", {
     className: "header fade-up"
